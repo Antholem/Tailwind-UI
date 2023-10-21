@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { nightOwl as dark, foundation as light } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { HiOutlineCheck, HiOutlineClipboard } from 'react-icons/hi';
+import useDarkModeStore from '@/app/_store/theme-store';
 
 type ClipboardProps = {
     sourceCode: string;
@@ -12,9 +13,11 @@ type ClipboardProps = {
 };
 
 const Clipboard: FC<ClipboardProps> = ({ sourceCode, header, onCopy, isCheck }) => {
+    const { darkMode } = useDarkModeStore();
+
     return (
-        <div className='max-w-2xl min-w-[25rem] bg-[#3a404d] rounded-md overflow-hidden'>
-            <div className='flex justify-between px-4 py-1 text-white text-xs items-center'>
+        <div className={`max-w-2xl min-w-[25rem] bg-[${darkMode ? '#272f41' : '#f8f9fa'}] rounded-md overflow-hidden`}>
+            <div className='flex justify-between px-4 py-1 text-xs items-center'>
                 <p className='text-xs'>
                     {header}
                 </p>
@@ -27,7 +30,7 @@ const Clipboard: FC<ClipboardProps> = ({ sourceCode, header, onCopy, isCheck }) 
                     </button>
                 </CopyToClipboard>
             </div>
-            <SyntaxHighlighter language="javascript" style={atomOneDark} wrapLongLines={true}>
+            <SyntaxHighlighter className='text-md' language="javascript" style={darkMode ? dark : light} wrapLongLines={false}>
                 {sourceCode}
             </SyntaxHighlighter>
         </div>
