@@ -1,34 +1,48 @@
 "use client"
-import React from 'react';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import React, { Fragment, useState } from 'react';
+import { Clipboard } from './_components/';
 
-const Component = () => {
+const Page = () => {
   const codeString = `
-"use client"
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { docco } from "react-syntax-highlighter/dist/esm/styles/prism";
+    "use client"
+    import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+    import { docco } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-return (
-  <SyntaxHighlighter language="javascript" style={docco}>
-    asddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-  </SyntaxHighlighter>
-);
+    return (
+      <SyntaxHighlighter language="javascript" style={docco}>
+        Hello World, this is Tailwind UI
+      </SyntaxHighlighter>
+    );
   `;
 
+  const sampleCode = `
   return (
-    <div className='max-w-2xl min-w-[25rem] bg-[#3a404d] rounded-md overflow-hidden'>
-      <div className='flex justify-between px-4 text-white text-xs items-center'>
-        <p className='text-sm'>Example</p>
-        <button className='py-1 inline-flex items-center gap-1'>
-          Copy Code
-        </button>
-      </div>
-      <SyntaxHighlighter language="javascript" style={atomOneDark} wrapLongLines={true} >
-        {codeString}
-      </SyntaxHighlighter>
-    </div>
+    <Button>Click Me!</Button>
+  );
+  `;
+
+  const [lastCopied, setLastCopied] = useState<number | null>(null);
+
+  const handleCopy = (index: number) => {
+    setLastCopied(index);
+  };
+
+  return (
+    <Fragment>
+      <Clipboard
+        sourceCode={codeString}
+        header={'Sample Clipboard Number 1'}
+        onCopy={() => handleCopy(1)}
+        isCheck={lastCopied === 1}
+      />
+      <Clipboard
+        sourceCode={sampleCode}
+        header={'Sample Clipboard Number 2'}
+        onCopy={() => handleCopy(2)}
+        isCheck={lastCopied === 2}
+      />
+    </Fragment>
   );
 };
 
-export default Component;
+export default Page;
