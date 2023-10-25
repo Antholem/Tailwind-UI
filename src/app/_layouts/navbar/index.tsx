@@ -16,7 +16,7 @@ const Navbar = () => {
     return (
         <nav className='p-4 shadow-md'>
             <div className='mx-auto flex justify-between items-center px-6'>
-                <div className={`cursor-pointer inline md:hidden text-2xl text-gray-${darkMode ? '200' : '400'}`}>
+                <div className={`cursor-pointer inline md:hidden text-2xl ${darkMode ? 'text-gray-200' : 'text-gray-400'}`}>
                     <GiHamburgerMenu />
                 </div>
                 <div className='hidden md:flex justify-start items-center space-x-3 cursor-pointer'>
@@ -35,7 +35,7 @@ const Navbar = () => {
                             type='text'
                             name='search'
                             id='search'
-                            className={`bg-${darkMode && '[#2d3748]'} py-2 px-10 rounded-md border border-gray-${darkMode ? '700' : '100'} focus:border-blue-300 focus:outline-none shadow-md`}
+                            className={`${darkMode ? 'bg-[#2d3748]' : 'bg-white'} py-2 px-10 rounded-md border ${darkMode ? 'border-gray-700' : 'border-gray-100'} focus:border-blue-300 focus:outline-none shadow-md`}
                             placeholder='Search the docs'
                         />
                         <div className='absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400'>
