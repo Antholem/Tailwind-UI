@@ -1,4 +1,5 @@
 "use client"
+import { ReactNode } from 'react';
 import useDarkModeStore from './_store/theme-store';
 import './globals.css'
 import { Inter } from 'next/font/google'
@@ -8,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: ReactNode
 }) {
   const { darkMode } = useDarkModeStore();
   return (

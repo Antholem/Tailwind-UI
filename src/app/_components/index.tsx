@@ -1,4 +1,4 @@
-import Clipboard from "./clipboard";
+import Clipboard from "../_layouts/clipboard";
 
 export {
     Clipboard,

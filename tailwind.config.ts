@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundColor: {
+        dark: '#1a202c',
         primary: {
           100: '#e0f2fe',
           200: '#a5f3fc',

@@ -16,7 +16,7 @@ const Clipboard: FC<ClipboardProps> = ({ sourceCode, header, onCopy, isCheck }) 
     const { darkMode } = useDarkModeStore();
 
     return (
-        <div className={`max-w-2xl min-w-[25rem] bg-[${darkMode ? '#272f41' : '#f8f9fa'}] rounded-md overflow-hidden`}>
+        <div className={`max-w-2xl  bg-[${darkMode ? '#272f41' : '#f8f9fa'}] rounded-md overflow-hidden`}>
             <div className='flex justify-between px-4 py-1 text-xs items-center'>
                 <p className='text-xs'>
                     {header}
