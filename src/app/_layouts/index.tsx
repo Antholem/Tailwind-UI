@@ -1,5 +1,5 @@
-import Navbar from "./navbar"
+import Clipboard from "./clipboard"
 
 export {
-    Navbar,
+    Clipboard,
 }

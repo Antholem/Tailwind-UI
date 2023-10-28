@@ -1,5 +1,5 @@
-import Clipboard from "../_layouts/clipboard";
+import IconButton from "./icon-button";
 
 export {
-    Clipboard,
+    IconButton,
 }
