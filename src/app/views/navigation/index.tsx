@@ -121,7 +121,15 @@ const Navigation: FC<NavProps> = ({ children }) => {
                             </div>
                         </div>
                         <div>
-                            <Link href="/text" />
+                            Get Started
+                            <br />
+                            <Link href='/'>
+                                Home
+                            </Link>
+                            <br />
+                            <Link href='/views/components/text'>
+                                Text
+                            </Link>
                         </div>
                     </div>
                 </div>

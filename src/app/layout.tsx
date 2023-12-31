@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 import useDarkModeStore from './_store/theme-store';
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { Navigation } from './views';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +20,9 @@ export default function RootLayout({
         <title>Tailwind UI</title>
       </head>
       <body className={`${inter.className} bg-white ${darkMode && 'dark-mode'}`}>
-        {children}
+        <Navigation>
+          {children}
+        </Navigation>
       </body>
     </html>
   )
