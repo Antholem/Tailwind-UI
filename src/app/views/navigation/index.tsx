@@ -86,7 +86,7 @@ const Navigation: FC<NavProps> = ({ children }) => {
             </div>
             <ul>
                 {component.list.map((item, index) => (
-                    <Link href={item.link}>
+                    <Link key={index} href={item.link}>
                         <li key={index} className='mb-2'>{item.name}</li>
                     </Link>
                 ))}
