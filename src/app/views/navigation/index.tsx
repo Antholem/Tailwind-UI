@@ -23,6 +23,77 @@ const Navigation: FC<NavProps> = ({ children }) => {
         setShowSidebar(!showSidebar);
     };
 
+    const components = [
+        {
+            category: 'Layout',
+            list: [
+                {
+                    name: "Box",
+                    link: "/box"
+                },
+                {
+                    name: "Grid",
+                    link: "/grid"
+                },
+                {
+                    name: "Stack",
+                    link: "/stack"
+                }
+            ]
+        },
+        {
+            category: 'Forms',
+            list: [
+                {
+                    name: "Button",
+                    link: "/button"
+                },
+                {
+                    name: "Radio",
+                    link: "/radio"
+                },
+                {
+                    name: "Slider",
+                    link: "/slider"
+                }
+            ]
+        },
+        {
+            category: 'Typography',
+            list: [
+                {
+                    name: "Text",
+                    link: "/text"
+                },
+                {
+                    name: "Heading",
+                    link: "/heading"
+                },
+                {
+                    name: "Highlight",
+                    link: "/highlight"
+                }
+            ]
+        }
+    ];
+
+    const componentList = components.map(component => (
+        <div key={component.category} className='mb-8'>
+            <div>
+                <p className='uppercase mb-2 text-blue-300'>
+                    {component.category}
+                </p>
+            </div>
+            <ul>
+                {component.list.map((item, index) => (
+                    <Link href={item.link}>
+                        <li key={index} className='mb-2'>{item.name}</li>
+                    </Link>
+                ))}
+            </ul>
+        </div>
+    ));
+
     return (
         <div className='flex flex-col h-screen'>
             <div className='p-4 shadow-md'>
@@ -121,15 +192,7 @@ const Navigation: FC<NavProps> = ({ children }) => {
                             </div>
                         </div>
                         <div>
-                            Get Started
-                            <br />
-                            <Link href='/'>
-                                Home
-                            </Link>
-                            <br />
-                            <Link href='/views/components/text'>
-                                Text
-                            </Link>
+                            {componentList}
                         </div>
                     </div>
                 </div>
