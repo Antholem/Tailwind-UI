@@ -17,7 +17,9 @@ export default function RootLayout({
     <html lang='en'>
       <head>
         <link rel="icon" href="/logo.png" />
-        <title>Tailwind UI</title>
+        <title>
+          Tailwind UI
+        </title>
       </head>
       <body className={`${inter.className} bg-white ${darkMode && 'dark-mode'}`}>
         <Navigation>
