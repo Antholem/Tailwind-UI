@@ -48,7 +48,7 @@ const Navigation: FC<NavProps> = ({ children }) => {
 
     return (
         <div className='flex flex-col h-screen'>
-            <div className='p-4 shadow-md'>
+            <div className={`p-4 shadow-md sticky top-0 ${showSidebar ? '' : 'z-50'} ${darkMode ? 'bg-dark' : 'bg-white'}`}>
                 <div className='mx-auto flex justify-between items-center px-6'>
                     <div className='inline md:hidden' onClick={toggleSidebar}>
                         <div className='cursor-pointer relative'>
@@ -132,8 +132,8 @@ const Navigation: FC<NavProps> = ({ children }) => {
                     </div>
                 </div>
             </div>
-            <div className='flex flex-1'>
-                <div className={`md:w-1/5 px-4 py-2 absolute md:static shadow-lg bottom-0 top-0 left-0 right-20 ${darkMode ? 'bg-[#232c3b] md:bg-inherit' : 'bg-[#ffffff] md:bg-inherit'} transition-transform duration-300 ease-in-out transform ${showSidebar ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
+            <div className='flex flex-1 overflow-y-auto'>
+                <div className={`overflow-y-auto md:w-1/5 px-4 py-2 absolute md:static shadow-lg bottom-0 top-0 left-0 right-20 ${darkMode ? 'bg-[#232c3b] md:bg-inherit' : 'bg-[#ffffff] md:bg-inherit'} transition-transform duration-300 ease-in-out transform ${showSidebar ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
                     <div className='flex flex-col space-y-1'>
                         <div className='flex md:hidden justify-end'>
                             <div onClick={toggleSidebar} className='relative cursor-pointer'>
@@ -150,7 +150,7 @@ const Navigation: FC<NavProps> = ({ children }) => {
                         </div>
                     </div>
                 </div>
-                <div className='flex-1'>
+                <div className='flex-1 overflow-y-auto'>
                     <div className='p-3'>
                         {children}
                     </div>
