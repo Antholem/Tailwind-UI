@@ -56,8 +56,8 @@ const Components = [
                 link: "/views/components/button"
             },
             {
-                name: "Radio",
-                link: "/radio"
+                name: "Checkbox",
+                link: "/views/components/checkbox"
             },
             {
                 name: "Slider",
