@@ -6,6 +6,7 @@ import { RiGithubFill, RiMoonFill, RiYoutubeFill } from 'react-icons/ri';
 import { GoSearch } from 'react-icons/go';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import Link from 'next/link';
+import Components from './components';
 
 type NavProps = {
     children: ReactNode;
@@ -23,71 +24,22 @@ const Navigation: FC<NavProps> = ({ children }) => {
         setShowSidebar(!showSidebar);
     };
 
-    const components = [
-        {
-            category: 'Layout',
-            list: [
-                {
-                    name: "Box",
-                    link: "/box"
-                },
-                {
-                    name: "Grid",
-                    link: "/grid"
-                },
-                {
-                    name: "Stack",
-                    link: "/stack"
-                }
-            ]
-        },
-        {
-            category: 'Forms',
-            list: [
-                {
-                    name: "Button",
-                    link: "/button"
-                },
-                {
-                    name: "Radio",
-                    link: "/radio"
-                },
-                {
-                    name: "Slider",
-                    link: "/slider"
-                }
-            ]
-        },
-        {
-            category: 'Typography',
-            list: [
-                {
-                    name: "Text",
-                    link: "/text"
-                },
-                {
-                    name: "Heading",
-                    link: "/heading"
-                },
-                {
-                    name: "Highlight",
-                    link: "/highlight"
-                }
-            ]
-        }
-    ];
-
-    const componentList = components.map(component => (
+    const componentList = Components.map(component => (
         <div key={component.category} className='mb-8'>
             <div>
-                <p className='uppercase mb-2 text-blue-300'>
+                <p className='uppercase mb-3 text-sm text-blue-300 font-semibold'>
                     {component.category}
                 </p>
             </div>
             <ul>
                 {component.list.map((item, index) => (
                     <Link key={index} href={item.link}>
-                        <li key={index} className='mb-2'>{item.name}</li>
+                        <li
+                            key={index}
+                            className={`mb-3 text-sm font-medium`}
+                        >
+                            {item.name}
+                        </li>
                     </Link>
                 ))}
             </ul>
@@ -110,16 +62,18 @@ const Navigation: FC<NavProps> = ({ children }) => {
                             </div>
                         </div>
                     </div>
-                    <div className='flex justify-start items-center space-x-3 cursor-pointer'>
-                        <div>
-                            <img className='w-7 md:w-10 h-7 md:h-10' src='/logo.png' alt='logo' />
+                    <Link href='/'>
+                        <div className='flex justify-start items-center space-x-3 cursor-pointer'>
+                            <div>
+                                <img className='w-7 md:w-10 h-7 md:h-10' src='/logo.png' alt='logo' />
+                            </div>
+                            <div>
+                                <p className='text-lg md:text-xl font-semibold'>
+                                    Tailwind UI
+                                </p>
+                            </div>
                         </div>
-                        <div>
-                            <p className='text-lg md:text-xl font-semibold'>
-                                Tailwind UI
-                            </p>
-                        </div>
-                    </div>
+                    </Link>
                     <div className='hidden md:flex items-center'>
                         <div className='relative'>
                             <input
