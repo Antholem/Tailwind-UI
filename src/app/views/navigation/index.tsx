@@ -150,9 +150,14 @@ const Navigation: FC<NavProps> = ({ children }) => {
                         </div>
                     </div>
                 </div>
-                <div className='flex-1 overflow-y-auto'>
+                <div className='flex-1 overflow-y-auto px-4 lg:px-10 py-8'>
                     <div className='p-3'>
                         {children}
+                    </div>
+                </div>
+                <div className='hidden md:inline w-[20%] overflow-y-auto px-2 bg-gray-800'>
+                    <div className='p-3'>
+                        {componentList}
                     </div>
                 </div>
             </div>
