@@ -5,11 +5,11 @@ type DarkModeStore = {
     setDarkMode: () => void;
 };
 
-const useDarkModeStore = create<DarkModeStore>((set) => ({
+const globalState = create<DarkModeStore>((set) => ({
     darkMode: true,
     setDarkMode: () => set((state) => ({
         darkMode: !state.darkMode,
     })),
 }));
 
-export default useDarkModeStore;
+export default globalState;

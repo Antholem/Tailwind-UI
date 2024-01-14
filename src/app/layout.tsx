@@ -1,6 +1,6 @@
 "use client"
 import { ReactNode } from 'react';
-import useDarkModeStore from './_store/theme-store';
+import globalState from './state';
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { Navigation } from './views';
@@ -12,7 +12,7 @@ export default function RootLayout({
 }: {
   children: ReactNode
 }) {
-  const { darkMode } = useDarkModeStore();
+  const { darkMode } = globalState();
   return (
     <html lang='en'>
       <head>

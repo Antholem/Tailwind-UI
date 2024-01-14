@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import { Clipboard } from '@/app/_layouts'
-import GetTheme from '@/app/_components/theme'
+import GetTheme from '@/app/theme'
 
 const Button = () => {
     const [lastCopied, setLastCopied] = useState<number | null>(null);
@@ -16,7 +16,7 @@ const Button = () => {
         setLastCopied(index);
     };
 
-    const { textSecondary, textPrimary } = GetTheme();
+    const { textNormal, textBlue } = GetTheme();
 
     return (
         <div className='flex flex-col space-y-10'>
@@ -35,9 +35,6 @@ const Button = () => {
                     <div className='text-2xl font-medium'>
                         Usage
                     </div>
-                    <p className={`${textPrimary}`}>
-                        AISBAUISBAIUSBAUISBAISBAOINSA
-                    </p>
                     <div className=''>
                         For basic button, add background color, padding, and border radius only.
                     </div>
