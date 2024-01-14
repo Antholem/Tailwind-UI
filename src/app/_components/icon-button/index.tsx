@@ -1,4 +1,5 @@
-import useDarkModeStore from '@/app/_store/theme-store';
+import globalState from '@/app/state';
+import GetTheme from '@/app/theme';
 import React, { FC, ReactNode, HTMLProps } from 'react';
 
 type IconButtonProps = {
@@ -6,7 +7,8 @@ type IconButtonProps = {
 } & HTMLProps<HTMLDivElement>;
 
 const IconButton: FC<IconButtonProps> = ({ children, ...rest }) => {
-    const { darkMode } = useDarkModeStore();
+    const { darkMode } = globalState();
+    const { textGray } = GetTheme();
 
     return (
         <div className='cursor-pointer relative'>

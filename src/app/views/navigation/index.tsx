@@ -1,5 +1,5 @@
 import React, { FC, ReactNode, useState } from 'react';
-import useDarkModeStore from '@/app/_store/theme-store';
+import globalState from '@/app/state';
 import { MdOutlineClose } from 'react-icons/md';
 import { FaSun, FaDiscord } from 'react-icons/fa';
 import { RiGithubFill, RiMoonFill, RiYoutubeFill } from 'react-icons/ri';
@@ -13,7 +13,7 @@ type NavProps = {
 };
 
 const Navigation: FC<NavProps> = ({ children }) => {
-    const { darkMode, setDarkMode } = useDarkModeStore();
+    const { darkMode, setDarkMode } = globalState();
     const [showSidebar, setShowSidebar] = useState(false);
 
     const toggleMode = () => {
