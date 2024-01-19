@@ -1,3 +1,4 @@
+// state.ts
 import { create } from 'zustand';
 
 type DarkModeStore = {
@@ -7,9 +8,7 @@ type DarkModeStore = {
 
 const globalState = create<DarkModeStore>((set) => ({
     darkMode: true,
-    setDarkMode: (isEnabled) => set((state) => ({
-        darkMode: isEnabled,
-    })),
+    setDarkMode: (isEnabled) => set({ darkMode: isEnabled }),
 }));
 
 export default globalState;
