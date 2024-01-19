@@ -1,18 +1,18 @@
 import React from 'react';
-import theme from '@/app/theme';
+// import theme from '@/app/theme';
 
 const Content = () => {
-  const { text, bg } = theme();
+  // const { text, bg } = theme();
 
   return (
     <>
-      <div className={`${text.pink} font-extrabold text-6xl`}>
+      {/* <div className={`${text.pink} font-extrabold text-6xl`}>
         Landing Page
 
       </div>
       <button className={`${bg.default} p-4`}>
         sas
-      </button>
+      </button> */}
     </>
   );
 };
