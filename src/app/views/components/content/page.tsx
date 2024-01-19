@@ -1,13 +1,20 @@
-import GetTheme from '@/app/theme';
+import React from 'react';
+import theme from '@/app/theme';
 
 const Content = () => {
-  const { text_orange } = GetTheme();
+  const { text, bg } = theme();
 
   return (
-    <div className={`${text_orange}`}>
-      Landing Page
-    </div>
+    <>
+      <div className={`${text.pink} font-extrabold text-6xl`}>
+        Landing Page
+
+      </div>
+      <button className={`${bg.default} p-4`}>
+        sas
+      </button>
+    </>
   );
-}
+};
 
 export default Content;
