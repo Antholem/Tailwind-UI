@@ -1,5 +1,4 @@
 import globalState from '@/app/state';
-import GetTheme from '@/app/theme';
 import React, { FC, ReactNode, HTMLProps } from 'react';
 
 type IconButtonProps = {
@@ -8,7 +7,6 @@ type IconButtonProps = {
 
 const IconButton: FC<IconButtonProps> = ({ children, ...rest }) => {
     const { darkMode } = globalState();
-    const { textGray } = GetTheme();
 
     return (
         <div className='cursor-pointer relative'>
