@@ -17,7 +17,7 @@ const Navigation: FC<NavProps> = ({ children }) => {
     const [showSidebar, setShowSidebar] = useState(false);
 
     const toggleMode = () => {
-        setDarkMode();
+        setDarkMode(!darkMode);
     };
 
     const toggleSidebar = () => {
