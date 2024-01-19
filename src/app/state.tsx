@@ -1,14 +1,14 @@
 // state.ts
-import { create } from 'zustand';
+import create from 'zustand';
 
-type DarkModeStore = {
+interface GlobalState {
     darkMode: boolean;
-    setDarkMode: (isEnabled: boolean) => void;
-};
+    setDarkMode: () => void;
+}
 
-const globalState = create<DarkModeStore>((set) => ({
+const useGlobalState = create<GlobalState>((set) => ({
     darkMode: true,
-    setDarkMode: (isEnabled) => set({ darkMode: isEnabled }),
+    setDarkMode: () => set((state) => ({ darkMode: !state.darkMode })),
 }));
 
-export default globalState;
+export default useGlobalState;
