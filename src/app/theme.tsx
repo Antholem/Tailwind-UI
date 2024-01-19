@@ -1,11 +1,12 @@
 // theme.js
-import globalState from "./state";
+
+import { useDarkMode } from "./state";
 
 const theme = () => {
-    const { darkMode } = globalState();
+    const { darkMode } = useDarkMode();
 
     const text = {
-        default: darkMode ? 'text-white' : 'text-black',
+        default: darkMode ? 'text-red-400' : 'text-blue-500',
     };
 
     return {
