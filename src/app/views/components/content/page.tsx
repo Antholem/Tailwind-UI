@@ -1,8 +1,8 @@
 import React from 'react';
-import theme from '@/app/theme';
+import GetTheme from '@/app/theme';
 
 const Content = () => {
-  const { text } = theme();
+  const { textBlue } = GetTheme();
 
   return (
     <>
@@ -10,7 +10,7 @@ const Content = () => {
         Landing Page
 
       </div> */}
-      <button className={`${text.default} p-4`}>
+      <button className={`${textBlue} p-4`}>
         sas
       </button>
     </>

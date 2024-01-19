@@ -1,16 +1,17 @@
-import globalState from "./state";
+import globalState from "@/app/state";
 
-const theme = () => {
-    //  const { darkMode } = globalState();
+const GetTheme = () => {
+    const { darkMode } = globalState();
 
-    const text = {
-        default: 'text-black',
-    };
+    const textNormal = darkMode ? 'text-white' : 'text-black';
+    const textBlue = darkMode ? 'text-blue-300' : 'text-blue-600';
+    const textGray = darkMode ? 'text-gray-200' : 'text-gray-400';
 
     return {
-        text,
-        // bg
+        textNormal,
+        textGray,
+        textBlue
     };
-};
+}
 
-export default theme;
+export default GetTheme;
