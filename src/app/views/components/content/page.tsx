@@ -10,8 +10,8 @@ const Content = () => {
         Landing Page
 
       </div> */}
-      <button className={`${text.default} p-4`}>
-        sas
+      <button>
+        {text.default}
       </button>
     </>
   );
