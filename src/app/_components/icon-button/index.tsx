@@ -8,7 +8,6 @@ type IconButtonProps = {
 
 const IconButton: FC<IconButtonProps> = ({ children, ...rest }) => {
     const { darkMode } = globalState();
-    const { textGray } = GetTheme();
 
     return (
         <div className='cursor-pointer relative'>
