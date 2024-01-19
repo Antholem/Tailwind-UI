@@ -1,14 +1,14 @@
 // state.ts
-import { atom, useAtom } from 'jotai';
+import create from 'zustand';
 
-export const darkModeAtom = atom<boolean>(true);
+interface GlobalState {
+    darkMode: boolean;
+    setDarkMode: () => void;
+}
 
-export const useDarkMode = () => {
-    const [darkMode, setDarkMode] = useAtom(darkModeAtom);
+const useGlobalState = create<GlobalState>((set) => ({
+    darkMode: true,
+    setDarkMode: () => set((state) => ({ darkMode: !state.darkMode })),
+}));
 
-    const toggleDarkMode = () => {
-        setDarkMode((prevDarkMode) => !prevDarkMode);
-    };
-
-    return { darkMode, toggleDarkMode };
-};
+export default useGlobalState;
