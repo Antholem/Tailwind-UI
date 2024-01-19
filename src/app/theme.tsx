@@ -4,7 +4,7 @@ const theme = () => {
     const { darkMode } = globalState();
 
     const text = {
-        default: darkMode ? `text-white` : `text-black`,
+        default: `${darkMode ? 'text-white bg-black' : 'text-black bg-white'}`,
     };
 
     return {
