@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from 'react'
 import { Clipboard } from '@/app/_layouts'
-import GetTheme from '@/app/theme'
 
 const Button = () => {
     const [lastCopied, setLastCopied] = useState<number | null>(null);
@@ -15,8 +14,6 @@ const Button = () => {
     const handleCopy = (index: number) => {
         setLastCopied(index);
     };
-
-    const { textNormal, textBlue } = GetTheme();
 
     return (
         <div className='flex flex-col space-y-10'>
