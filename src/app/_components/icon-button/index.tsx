@@ -1,5 +1,4 @@
 import globalState from '@/app/state';
-import GetTheme from '@/app/theme';
 import React, { FC, ReactNode, HTMLProps } from 'react';
 
 type IconButtonProps = {
