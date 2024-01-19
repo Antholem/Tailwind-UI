@@ -1,14 +1,13 @@
+// Content.js
+
 import React from 'react';
-import text from '@/app/theme';
+import getTheme from '@/app/theme';
 
 const Content = () => {
+  const { text } = getTheme();
 
   return (
     <>
-      {/* <div className={`${text.pink} font-extrabold text-6xl`}>
-        Landing Page
-
-      </div> */}
       <button className={`${text.default} p-4`}>
         sas
       </button>
