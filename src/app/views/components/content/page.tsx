@@ -6,7 +6,7 @@ const Content = () => {
 
   return (
     <>
-      <button className={`${text.default} p-4`}>
+      <button className={`${text.text_red} p-4`}>
         sas
       </button>
     </>
