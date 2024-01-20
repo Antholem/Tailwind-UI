@@ -52,7 +52,6 @@ const theme = () => {
         bgCyan,
         bgPurple,
         bgPink,
-
     };
 }
 
