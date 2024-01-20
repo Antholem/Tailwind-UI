@@ -6,10 +6,10 @@ const Content = () => {
 
   return (
     <>
-      <button className={`${color.psGray} p-6 text-black`}>
+      <button className={`${color.bgGray} p-6 text-black`}>
         BUTTON
       </button>
-      <h1 className={`${color.textGreen} font-black text-6xl`}>
+      <h1 className={color.textGray}>
         TEXT COLOR
       </h1>
     </>

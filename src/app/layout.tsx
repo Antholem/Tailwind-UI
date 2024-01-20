@@ -23,7 +23,7 @@ export default function RootLayout({
           Tailwind UI
         </title>
       </head>
-      <body className={`${inter.className} ${color.dark} ${color.textDefault}`}>
+      <body className={`${inter.className} ${color.bgDark} ${color.textDefault}`}>
         <Navigation>
           {children}
         </Navigation>

@@ -2,7 +2,6 @@ import globalState from "@/app/state";
 
 const theme = () => {
     const { darkMode } = globalState();
-    const transition = 'duration-300 ease-in-out';
 
     // font colors
     const textDefault = darkMode ? 'text-white' : 'text-black';
@@ -30,21 +29,8 @@ const theme = () => {
     const bgPurple = darkMode ? 'bg-purple-300' : 'bg-purple-600';
     const bgPink = darkMode ? 'bg-pink-300' : 'bg-pink-500';
 
-    // pseudo class color
-    const psDefault = darkMode ? `bg-white hover:bg-gray-200 active:bg-gray-300 ${transition}` : `bg-black hover:bg-gray-900 active:bg-gray-800 ${transition}`;
-    const psGray = darkMode ? `bg-gray-300 hover:bg-gray-200 active:bg-gray-100 ${transition}` : `bg-gray-500 hover:bg-gray-400 active:bg-gray-300 ${transition}`;
-    const psRed = darkMode ? `bg-red-400 hover:bg-red-500 active:bg-red-600 ${transition}` : `bg-red-600 hover:bg-red-700 active:bg-red-800 ${transition}`;
-    const psOrange = darkMode ? `bg-orange-300 hover:bg-orange-400 active:bg-orange-500 ${transition}` : `bg-orange-500 hover:bg-orange-600 active:bg-orange-700 ${transition}`;
-    const psYellow = darkMode ? `bg-yellow-200 hover:bg-yellow-300 active:bg-yellow-400 ${transition}` : `bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 ${transition}`;
-    const psGreen = darkMode ? `bg-green-300 hover:bg-green-400 active:bg-green-500 ${transition}` : `bg-green-500 hover:bg-green-600 active:bg-green-700 ${transition}`;
-    const psTeal = darkMode ? `bg-teal-300 hover:bg-teal-400 active:bg-teal-500 ${transition}` : `bg-teal-500 hover:bg-teal-600 active:bg-teal-700 ${transition}`;
-    const psBlue = darkMode ? `bg-blue-300 hover:bg-blue-400 active:bg-blue-500 ${transition}` : `bg-blue-600 hover:bg-blue-700 active:bg-blue-800 ${transition}`;
-    const psCyan = darkMode ? `bg-cyan-300 hover:bg-cyan-400 active:bg-cyan-500 ${transition}` : `bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 ${transition}`;
-    const psPurple = darkMode ? `bg-purple-300 hover:bg-purple-400 active:bg-purple-500 ${transition}` : `bg-purple-600 hover:bg-purple-700 active:bg-purple-800 ${transition}`;
-    const psPink = darkMode ? `bg-pink-300 hover:bg-pink-400 active:bg-pink-500 ${transition}` : `bg-pink-500 hover:bg-pink-600 active:bg-pink-700 ${transition}`;
-
     // custom dark mode
-    const dark = darkMode ? 'bg-[#1a202c]' : 'bg-[#ffffff]'
+    const bgDark = darkMode ? 'bg-[#1a202c]' : 'bg-[#ffffff]'
     const altDark = darkMode ? 'bg-[#232b3b]' : 'bg-[#ebebeb]';
 
     return {
@@ -70,18 +56,7 @@ const theme = () => {
         bgCyan,
         bgPurple,
         bgPink,
-        psDefault,
-        psGray,
-        psRed,
-        psOrange,
-        psYellow,
-        psGreen,
-        psTeal,
-        psBlue,
-        psCyan,
-        psPurple,
-        psPink,
-        dark,
+        bgDark,
         altDark
     };
 }
