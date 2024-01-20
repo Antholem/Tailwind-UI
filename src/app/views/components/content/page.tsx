@@ -1,15 +1,13 @@
 import React from 'react';
-import theme from '@/app/theme';
 
 const Content = () => {
-  const { textPurple } = theme();
 
   return (
     <>
-      <button className={`${textPurple} p-6 text-black`}>
+      <button >
         BUTTON
       </button>
-      <h1 className={textPurple}>
+      <h1>
         TEXT COLOR
       </h1>
     </>
