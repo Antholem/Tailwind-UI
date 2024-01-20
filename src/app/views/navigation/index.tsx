@@ -7,6 +7,7 @@ import { GoSearch } from 'react-icons/go';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import Link from 'next/link';
 import Components from './components';
+import theme from '@/app/theme';
 
 type NavProps = {
     children: ReactNode;
@@ -23,6 +24,8 @@ const Navigation: FC<NavProps> = ({ children }) => {
     const toggleSidebar = () => {
         setShowSidebar(!showSidebar);
     };
+
+    const color = theme();
 
     const componentList = Components.map(component => (
         <div key={component.category} className='mb-8'>
@@ -48,12 +51,12 @@ const Navigation: FC<NavProps> = ({ children }) => {
 
     return (
         <div className='flex flex-col h-screen'>
-            <div className={`p-4 shadow-md sticky top-0 ${showSidebar ? '' : 'z-50'} ${darkMode ? 'bg-dark' : 'bg-white'}`}>
+            <div className={`p-4 shadow-md sticky top-0 ${showSidebar ? '' : 'z-50'} ${color.dark}`}>
                 <div className='mx-auto flex justify-between items-center px-6'>
                     <div className='inline md:hidden' onClick={toggleSidebar}>
                         <div className='cursor-pointer relative'>
                             <div className='relative'>
-                                <div className={`p-2 ${darkMode ? 'text-gray-200' : 'text-gray-400'}`}>
+                                <div className={`p-2 ${color.textGray}`}>
                                     <div className='text-2xl'>
                                         <GiHamburgerMenu />
                                     </div>
@@ -91,7 +94,7 @@ const Navigation: FC<NavProps> = ({ children }) => {
                     <div className='flex items-end justify-end md:space-x-5'>
                         <div onClick={toggleMode} className='cursor-pointer relative'>
                             <div className='relative'>
-                                <div className={`p-2 ${darkMode ? 'text-gray-200' : 'text-gray-400'}`}>
+                                <div className={`p-2 ${color.textGray}`}>
                                     <div className='text-2xl'>
                                         {darkMode ? <FaSun /> : <RiMoonFill />}
                                     </div>
@@ -101,7 +104,7 @@ const Navigation: FC<NavProps> = ({ children }) => {
                         </div>
                         <div className='cursor-pointer relative hidden md:inline'>
                             <div className='relative'>
-                                <div className={`p-2 ${darkMode ? 'text-gray-200' : 'text-gray-400'}`}>
+                                <div className={`p-2 ${color.textGray}`}>
                                     <div className='text-2xl'>
                                         <RiGithubFill />
                                     </div>
@@ -111,7 +114,7 @@ const Navigation: FC<NavProps> = ({ children }) => {
                         </div>
                         <div className='cursor-pointer relative hidden md:inline'>
                             <div className='relative'>
-                                <div className={`p-2 ${darkMode ? 'text-gray-200' : 'text-gray-400'}`}>
+                                <div className={`p-2 ${color.textGray}`}>
                                     <div className='text-2xl'>
                                         <FaDiscord />
                                     </div>
@@ -121,7 +124,7 @@ const Navigation: FC<NavProps> = ({ children }) => {
                         </div>
                         <div className='cursor-pointer relative hidden md:inline'>
                             <div className='relative'>
-                                <div className={`p-2 ${darkMode ? 'text-gray-200' : 'text-gray-400'}`}>
+                                <div className={`p-2 ${color.textGray}`}>
                                     <div className='text-2xl'>
                                         <RiYoutubeFill />
                                     </div>
@@ -133,11 +136,11 @@ const Navigation: FC<NavProps> = ({ children }) => {
                 </div>
             </div>
             <div className='flex flex-1 overflow-y-auto'>
-                <div className={`overflow-y-auto md:w-1/5 px-4 py-2 absolute md:static shadow-lg bottom-0 top-0 left-0 right-20 ${darkMode ? 'bg-[#232c3b] md:bg-inherit' : 'bg-[#ffffff] md:bg-inherit'} transition-transform duration-300 ease-in-out transform ${showSidebar ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
+                <div className={`overflow-y-auto md:w-1/5 px-4 py-2 absolute md:static shadow-lg bottom-0 top-0 left-0 right-20 ${color.altDark} md:bg-inherit transition-transform duration-300 ease-in-out transform ${showSidebar ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
                     <div className='flex flex-col space-y-1'>
                         <div className='flex md:hidden justify-end'>
                             <div onClick={toggleSidebar} className='relative cursor-pointer'>
-                                <div className={`${darkMode ? 'text-gray-200' : 'text-gray-400'} cursor-pointer`}>
+                                <div className={`${color.textGray} cursor-pointer`}>
                                     <div className='text-2xl'>
                                         <MdOutlineClose />
                                     </div>
@@ -155,7 +158,7 @@ const Navigation: FC<NavProps> = ({ children }) => {
                         {children}
                     </div>
                 </div>
-                <div className='hidden md:inline w-[20%] overflow-y-auto px-2 bg-gray-800'>
+                <div className='hidden md:inline w-[20%] overflow-y-auto px-2'>
                     <div className='p-3'>
                         {componentList}
                     </div>

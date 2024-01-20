@@ -1,9 +1,9 @@
 "use client"
 import { ReactNode } from 'react';
-import globalState from './state';
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { Navigation } from './views';
+import theme from './theme';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,7 +12,9 @@ export default function RootLayout({
 }: {
   children: ReactNode
 }) {
-  const { darkMode } = globalState();
+
+  const color = theme();
+
   return (
     <html lang='en'>
       <head>
@@ -21,7 +23,7 @@ export default function RootLayout({
           Tailwind UI
         </title>
       </head>
-      <body className={`${inter.className} bg-white ${darkMode && 'dark-mode'}`}>
+      <body className={`${inter.className} ${color.dark} ${color.textDefault}`}>
         <Navigation>
           {children}
         </Navigation>

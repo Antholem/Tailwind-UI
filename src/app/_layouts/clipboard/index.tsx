@@ -4,6 +4,7 @@ import { nightOwl as dark, atomOneLight as light } from 'react-syntax-highlighte
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { HiOutlineCheck, HiOutlineClipboard } from 'react-icons/hi';
 import globalState from '@/app/state';
+import theme from '@/app/theme';
 
 type ClipboardProps = {
     sourceCode: string;
@@ -14,10 +15,11 @@ type ClipboardProps = {
 
 const Clipboard: FC<ClipboardProps> = ({ sourceCode, header, onCopy, isCheck }) => {
     const { darkMode } = globalState();
+    const color = theme();
 
     return (
-        <div className={`bg-[${darkMode ? '#272f41' : '#f8f9fa'}] rounded-md overflow-hidden`}>
-            <div className={`flex justify-between px-4 py-1 text-xs items-center ${darkMode ? 'bg-[#232b3b]' : 'bg-[#ebebeb]'}`}>
+        <div className={`{bg-[${darkMode ? '#272f41' : '#f8f9fa'}]} rounded-md overflow-hidden`}>
+            <div className={`flex justify-between px-4 py-1 text-xs items-center ${color.altDark}`}>
                 <p className='text-xs'>
                     {header}
                 </p>
