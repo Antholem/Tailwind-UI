@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "jotai": "^2.6.2",
     "next": "13.5.4",
     "next-seo": "^6.4.0",
     "react": "^18",
