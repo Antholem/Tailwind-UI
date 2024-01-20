@@ -3,9 +3,11 @@ import theme from '@/app/theme';
 
 const Content = () => {
 
+  const {color} = theme();
+
   return (
     <>
-      <button className={`${theme.textOrange} text-6xl font-black`}>
+      <button className={`${color.textGreen}`}>
         SAMPLE COLOR
       </button>
     </>
