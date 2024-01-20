@@ -29,10 +29,6 @@ const theme = () => {
     const bgPurple = darkMode ? 'bg-purple-300' : 'bg-purple-600';
     const bgPink = darkMode ? 'bg-pink-300' : 'bg-pink-500';
 
-    // custom dark mode
-    const bgDark = darkMode ? 'bg-[#1a202c]' : 'bg-[#ffffff]'
-    const altDark = darkMode ? 'bg-[#232b3b]' : 'bg-[#ebebeb]';
-
     return {
         textDefault,
         textGray,
@@ -56,8 +52,7 @@ const theme = () => {
         bgCyan,
         bgPurple,
         bgPink,
-        bgDark,
-        altDark
+
     };
 }
 

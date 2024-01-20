@@ -7,7 +7,6 @@ import { GoSearch } from 'react-icons/go';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import Link from 'next/link';
 import Components from './components';
-import theme from '@/app/theme';
 
 type NavProps = {
     children: ReactNode;
@@ -24,8 +23,6 @@ const Navigation: FC<NavProps> = ({ children }) => {
     const toggleSidebar = () => {
         setShowSidebar(!showSidebar);
     };
-
-    const color = theme();
 
     const componentList = Components.map(component => (
         <div key={component.category} className='mb-8'>
@@ -51,7 +48,7 @@ const Navigation: FC<NavProps> = ({ children }) => {
 
     return (
         <div className='flex flex-col h-screen'>
-            <div className={`p-4 shadow-md sticky top-0 ${showSidebar ? '' : 'z-50'} ${color.bgDark}`}>
+            <div className={`p-4 shadow-md sticky top-0 ${showSidebar ? '' : 'z-50'} ${darkMode ? 'bg-dark' : 'bg-white'}`}>
                 <div className='mx-auto flex justify-between items-center px-6'>
                     <div className='inline md:hidden' onClick={toggleSidebar}>
                         <div className='cursor-pointer relative'>
@@ -158,7 +155,7 @@ const Navigation: FC<NavProps> = ({ children }) => {
                         {children}
                     </div>
                 </div>
-                <div className='hidden md:inline w-[20%] overflow-y-auto px-2'>
+                <div className='hidden md:inline w-[20%] overflow-y-auto px-2 bg-gray-800'>
                     <div className='p-3'>
                         {componentList}
                     </div>
