@@ -1,17 +1,15 @@
-// theme.js
-
 import globalState from "@/app/state";
 
-const getTheme = () => {
-    const { darkMode } = globalState();
+const theme = () => {
+    var { darkMode } = globalState();
 
-    const text = {
+    var text = {
         default: darkMode ? 'text-white' : 'text-black',
     };
 
     return {
-        text,
+        text
     };
-};
+}
 
-export default getTheme;
+export default theme;

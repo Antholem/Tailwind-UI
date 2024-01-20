@@ -1,10 +1,8 @@
-// Content.js
-
 import React from 'react';
-import getTheme from '@/app/theme';
+import theme from '@/app/theme';
 
 const Content = () => {
-  const { text } = getTheme();
+  const { text } = theme();
 
   return (
     <>
