@@ -1,7 +1,7 @@
 import React from 'react';
 // import theme from '@/app/theme';
 
-const Content = () => {
+const Home = () => {
   // const { text } = theme();
 
   return (
@@ -10,10 +10,10 @@ const Content = () => {
         BUTTON
       </button> */}
       <h1>
-        TEXT COLOR
+        Home Page
       </h1>
     </>
   );
 };
 
-export default Content;
+export default Home;
