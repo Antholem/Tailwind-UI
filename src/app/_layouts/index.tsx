@@ -1,5 +1,9 @@
-import Clipboard from "./clipboard"
+import Header from "./header"
+import Body from "./body"
+import Navigation from "./navigation"
 
 export {
-    Clipboard,
+    Navigation,
+    Header,
+    Body
 }
