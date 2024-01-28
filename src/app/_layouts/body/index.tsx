@@ -1,3 +1,4 @@
+import globalState from '@/app/state';
 import React, { FC } from 'react';
 
 type BodyProps = {
@@ -8,6 +9,8 @@ type BodyProps = {
 };
 
 const Body: FC<BodyProps> = ({ title, description, component, clipboard }) => {
+    const { darkMode } = globalState();
+
     return (
         <div className='flex flex-col space-y-6'>
             <div className='text-2xl font-medium'>
@@ -16,7 +19,7 @@ const Body: FC<BodyProps> = ({ title, description, component, clipboard }) => {
             <div>
                 {description}
             </div>
-            <div className='border-solid border border-gray-600 p-4 rounded-lg'>
+            <div className={`border-solid border ${darkMode ? 'border-gray-600' : 'border-gray-300'} p-4 rounded-lg`}>
                 {component}
             </div>
             <div>
