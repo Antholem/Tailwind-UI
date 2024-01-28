@@ -6,7 +6,7 @@ import { RiGithubFill, RiMoonFill, RiYoutubeFill } from 'react-icons/ri';
 import { GoSearch } from 'react-icons/go';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import Link from 'next/link';
-import Components from './components';
+import List from './list';
 
 type NavProps = {
     children: ReactNode;
@@ -24,7 +24,7 @@ const Navigation: FC<NavProps> = ({ children }) => {
         setShowSidebar(!showSidebar);
     };
 
-    const componentList = Components.map(component => (
+    const componentList = List.map(component => (
         <div key={component.category} className='mb-8'>
             <div>
                 <p className='uppercase mb-3 text-sm text-blue-300 font-semibold'>

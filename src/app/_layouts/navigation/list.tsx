@@ -53,11 +53,11 @@ const Components = [
         list: [
             {
                 name: "Button",
-                link: "/views/components/button"
+                link: "/views/button"
             },
             {
                 name: "Checkbox",
-                link: "/views/components/checkbox"
+                link: "/views/checkbox"
             },
             {
                 name: "Slider",
