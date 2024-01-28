@@ -1,57 +1,49 @@
 "use client"
-import React, { useState } from 'react'
-import { Clipboard } from '@/app/_layouts'
+import React, { useState } from 'react';
+import { Header, Body } from '@/app/_layouts';
+import { Clipboard } from '@/app/_components';
+import List from './list';
+import globalState from '@/app/state';
 
 const Button = () => {
     const [lastCopied, setLastCopied] = useState<number | null>(null);
-
-    const codeString = `<div>
-    <button className='bg-blue-400 p-2 rounded-md'>
-        Button
-    </button>
-</div>`;
+    const { darkMode } = globalState();
 
     const handleCopy = (index: number) => {
         setLastCopied(index);
     };
 
+    const title = 'Button';
+    const description = 'Button component is used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.';
+
     return (
         <div className='flex flex-col space-y-10'>
             <div>
-                <div className='flex flex-col space-y-6'>
-                    <div className='text-3xl font-bold'>
-                        Button
-                    </div>
-                    <div>
-                        Button component is used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.
-                    </div>
-                </div>
+                <Header
+                    title={title}
+                    description={description}
+                />
             </div>
             <div>
-                <div className='flex flex-col space-y-6'>
-                    <div className='text-2xl font-medium'>
-                        Usage
-                    </div>
-                    <div className=''>
-                        For basic button, add background color, padding, and border radius only.
-                    </div>
-                    <div className='border-solid border  border-gray-600 p-4 rounded-lg'>
-                        <button className='bg-blue-400 p-2 rounded-md'>
-                            Button
-                        </button>
-                    </div>
-                    <div>
-                        <Clipboard
-                            sourceCode={codeString}
-                            header={'Sample Headers'}
-                            onCopy={() => handleCopy(1)}
-                            isCheck={lastCopied === 1}
-                        />
-                    </div>
-                </div>
+                {List.map((item) => (
+                    <Body
+                        key={item.id}
+                        title={item.title}
+                        description={item.description}
+                        component={darkMode ? item.component.dark : item.component.light}
+                        clipboard={
+                            <Clipboard
+                                sourceCode={item.source}
+                                header={item.clipboard}
+                                onCopy={() => handleCopy(item.id)}
+                                isCheck={lastCopied === item.id}
+                            />
+                        }
+                    />
+                ))}
             </div>
         </div>
-    )
+    );
 }
 
-export default Button
+export default Button;

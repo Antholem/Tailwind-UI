@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import globalState from './state';
 import './globals.css'
 import { Inter } from 'next/font/google'
-import { Navigation } from './views';
+import { Navigation } from '@/app/_layouts';
 
 const inter = Inter({ subsets: ['latin'] })
 

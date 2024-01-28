@@ -1,0 +1,29 @@
+import React, { FC } from 'react';
+
+type BodyProps = {
+    title: string;
+    description: string;
+    component: JSX.Element;
+    clipboard: JSX.Element;
+};
+
+const Body: FC<BodyProps> = ({ title, description, component, clipboard }) => {
+    return (
+        <div className='flex flex-col space-y-6'>
+            <div className='text-2xl font-medium'>
+                {title}
+            </div>
+            <div>
+                {description}
+            </div>
+            <div className='border-solid border border-gray-600 p-4 rounded-lg'>
+                {component}
+            </div>
+            <div>
+                {clipboard}
+            </div>
+        </div>
+    )
+}
+
+export default Body;
