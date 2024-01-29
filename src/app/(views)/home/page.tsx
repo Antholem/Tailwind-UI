@@ -1,8 +1,10 @@
+import { useDarkMode } from '@/app/state';
 import React from 'react';
 // import theme from '@/app/theme';
 
 const Home = () => {
   // const { text } = theme();
+  const { darkMode } = useDarkMode()
 
   return (
     <>
@@ -11,6 +13,7 @@ const Home = () => {
       </button> */}
       <h1>
         Home Page
+        {darkMode ? "dark" : "light"}
       </h1>
     </>
   );

@@ -3,7 +3,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { nightOwl as dark, atomOneLight as light } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { HiOutlineCheck, HiOutlineClipboard } from 'react-icons/hi';
-import globalState from '@/app/state';
+import { useDarkMode } from '@/app/state';
 
 type ClipboardProps = {
     sourceCode: string;
@@ -13,7 +13,7 @@ type ClipboardProps = {
 };
 
 const Clipboard: FC<ClipboardProps> = ({ sourceCode, header, onCopy, isCheck }) => {
-    const { darkMode } = globalState();
+    const { darkMode } = useDarkMode();
 
     return (
         <div className={`bg-[${darkMode ? '#272f41' : '#f8f9fa'}] rounded-md overflow-hidden`}>

@@ -1,4 +1,4 @@
-import globalState from '@/app/state';
+import { useDarkMode } from '@/app/state';
 import React, { FC, ReactNode, HTMLProps } from 'react';
 
 type IconButtonProps = {
@@ -6,7 +6,7 @@ type IconButtonProps = {
 } & HTMLProps<HTMLDivElement>;
 
 const IconButton: FC<IconButtonProps> = ({ children, ...rest }) => {
-    const { darkMode } = globalState();
+    const { darkMode } = useDarkMode();
 
     return (
         <div className='cursor-pointer relative'>
