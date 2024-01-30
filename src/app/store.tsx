@@ -1,3 +1,4 @@
-import { atom, useAtom } from 'jotai';
+// store.tsx
+import { atom } from 'jotai';
 
-export const sample = atom("Lem")
+export const sample = atom("Lem");
