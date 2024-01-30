@@ -1,12 +1,11 @@
-import { useAtom } from 'jotai';
-import { atomWithStorage } from 'jotai/utils';
+import { atom, useAtom } from 'jotai';
 
 type DarkModeStore = {
     darkMode: boolean;
     setDarkMode: () => void;
 };
 
-const darkModeAtom = atomWithStorage<DarkModeStore>('darkMode', {
+const darkModeAtom = atom<DarkModeStore>({
     darkMode: true,
     setDarkMode: () => { },
 });
