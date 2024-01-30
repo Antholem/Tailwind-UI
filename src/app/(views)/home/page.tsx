@@ -1,16 +1,17 @@
-// home.tsx
 import React from 'react';
-import { sample } from '@/app/store';
-import { useAtom, atom } from 'jotai'
-
-const countAtom = atom(0)
+// import theme from '@/app/theme';
 
 const Home = () => {
-  const [count, setCount] = useAtom(countAtom);
+  // const { text } = theme();
 
   return (
     <>
-      <button onClick={() => setCount((c) => c + 1)}>one up {count}</button>
+      {/* <button className={text.blue}>
+        BUTTON
+      </button> */}
+      <h1>
+        Home Page
+      </h1>
     </>
   );
 };
