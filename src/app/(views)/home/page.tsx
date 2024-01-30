@@ -1,16 +1,16 @@
 // home.tsx
 import React from 'react';
 import { sample } from '@/app/store';
-import { useAtom } from 'jotai';
+import { useAtom, atom } from 'jotai'
+
+const countAtom = atom(0)
 
 const Home = () => {
-  const [sampleName] = useAtom(sample);
+  const [count, setCount] = useAtom(countAtom);
 
   return (
     <>
-      <h1>
-        {sampleName}
-      </h1>
+      <button onClick={() => setCount((c) => c + 1)}>one up {count}</button>
     </>
   );
 };
