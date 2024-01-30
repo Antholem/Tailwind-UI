@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 import { Header, Body } from '@/app/_layouts';
 import { Clipboard } from '@/app/_components';
 import List from './list';
-import { useDarkMode } from '@/app/state';
+import globalState from '@/app/state';
 
 const Button = () => {
     const [lastCopied, setLastCopied] = useState<number | null>(null);
-    const { darkMode } = useDarkMode();
+    const { darkMode } = globalState();
 
     const handleCopy = (index: number) => {
         setLastCopied(index);

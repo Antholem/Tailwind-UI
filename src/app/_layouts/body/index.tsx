@@ -1,4 +1,4 @@
-import { useDarkMode } from '@/app/state';
+import globalState from '@/app/state';
 import React, { FC } from 'react';
 
 type BodyProps = {
@@ -9,7 +9,7 @@ type BodyProps = {
 };
 
 const Body: FC<BodyProps> = ({ title, description, component, clipboard }) => {
-    const { darkMode } = useDarkMode();
+    const { darkMode } = globalState();
 
     return (
         <div className='flex flex-col space-y-6'>

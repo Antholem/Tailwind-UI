@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
-import { useDarkMode } from '@/app/state';
+import globalState from '@/app/state';
 import { Home } from './(views)';
 
 const Page = () => {
-  const { darkMode } = useDarkMode();
+  const { darkMode } = globalState();
 
   return (
     <div className={` ${darkMode && 'dark-mode'}`}>

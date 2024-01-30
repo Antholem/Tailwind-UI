@@ -1,24 +1,15 @@
-import { atom, useAtom } from 'jotai';
+import { create } from 'zustand';
 
 type DarkModeStore = {
     darkMode: boolean;
     setDarkMode: () => void;
 };
 
-const darkModeAtom = atom<DarkModeStore>({
+const globalState = create<DarkModeStore>((set) => ({
     darkMode: true,
-    setDarkMode: () => { },
-});
+    setDarkMode: () => set((state) => ({
+        darkMode: !state.darkMode,
+    })),
+}));
 
-export const useDarkMode = () => {
-    const [state, setState] = useAtom(darkModeAtom);
-
-    const setDarkMode = () => {
-        setState((prev) => ({
-            ...prev,
-            darkMode: !prev.darkMode,
-        }));
-    };
-
-    return { ...state, setDarkMode };
-};
+export default globalState;
