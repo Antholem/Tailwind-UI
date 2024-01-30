@@ -1,13 +1,19 @@
-import { useDarkMode } from '@/app/store';
 import React from 'react';
+// import theme from '@/app/theme';
+import { sample } from '@/app/store';
+import { useAtom } from 'jotai';
 
 const Home = () => {
-  const { darkMode } = useDarkMode()
+  // const { text } = theme();
+  const [sampleName] = useAtom(sample);
 
   return (
     <>
+      {/* <button className={text.blue}>
+        BUTTON
+      </button> */}
       <h1>
-        Home Page
+        {sampleName}
       </h1>
     </>
   );
