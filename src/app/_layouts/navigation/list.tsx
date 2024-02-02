@@ -1,5 +1,14 @@
 const Components = [
     {
+        category: 'Getting Started',
+        list: [
+            {
+                name: "Home",
+                link: "/"
+            }
+        ]
+    },
+    {
         category: 'Layout',
         list: [
             {
