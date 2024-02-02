@@ -25,6 +25,8 @@ const Navigation: FC<NavProps> = ({ children }) => {
         setShowSidebar(!showSidebar);
     };
 
+    const currentPath = usePathname();
+
     const highlighter = `rounded-md bg-blue-300 bg-opacity-30 ${darkMode ? 'text-blue-300' : 'text-blue-500'}`;
 
     const componentList = List.map(component => (
@@ -40,7 +42,7 @@ const Navigation: FC<NavProps> = ({ children }) => {
                     <Link key={index} href={item.link}>
                         <li
                             key={index}
-                            className={`my-2 px-2 py-1 text-sm font-medium ${highlighter}`}
+                            className={`my-2 px-2 py-1 text-sm font-medium ${currentPath == item.link ? highlighter : 'bg-red-100'}`}
                         >
                             {item.name}
                         </li>
