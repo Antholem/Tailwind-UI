@@ -42,7 +42,7 @@ const Navigation: FC<NavProps> = ({ children }) => {
                     <Link key={index} href={item.link}>
                         <li
                             key={index}
-                            className={`my-2 px-2 py-1 text-sm font-medium ${currentPath == item.link ? highlighter : 'bg-red-100'}`}
+                            className={`my-2 px-2 py-1 text-sm font-medium ${currentPath == item.link ? highlighter : 'bg-transparent'}`}
                         >
                             {item.name}
                         </li>
