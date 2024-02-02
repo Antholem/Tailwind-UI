@@ -7,6 +7,7 @@ import { GoSearch } from 'react-icons/go';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import Link from 'next/link';
 import List from './list';
+import { usePathname } from 'next/navigation';
 
 type NavProps = {
     children: ReactNode;
@@ -24,19 +25,24 @@ const Navigation: FC<NavProps> = ({ children }) => {
         setShowSidebar(!showSidebar);
     };
 
+    const currentPath = usePathname();
+
+    const highlighter = `rounded-md bg-blue-300 bg-opacity-30 ${darkMode ? 'text-blue-300' : 'text-blue-500'}`;
+
     const componentList = List.map(component => (
         <div key={component.category} className='mb-8'>
             <div>
-                <p className='uppercase mb-3 text-sm text-blue-300 font-semibold'>
+                <p className={`uppercase px-2 mb-3 text-sm ${darkMode ? 'text-blue-300' : 'text-blue-500'} font-semibold`}>
                     {component.category}
                 </p>
             </div>
             <ul>
                 {component.list.map((item, index) => (
+                    
                     <Link key={index} href={item.link}>
                         <li
                             key={index}
-                            className={`mb-3 text-sm font-medium`}
+                            className={`my-2 px-2 py-1 text-sm font-medium ${currentPath == item.link ? highlighter : 'bg-transparent'}`}
                         >
                             {item.name}
                         </li>
