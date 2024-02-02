@@ -40,7 +40,7 @@ const Navigation: FC<NavProps> = ({ children }) => {
                     <Link key={index} href={item.link}>
                         <li
                             key={index}
-                            className={`my-2 px-2 py-1 text-sm font-medium ${usePathname() == item.link ? highlighter : 'bg-none'}`}
+                            className={`my-2 px-2 py-1 text-sm font-medium ${highlighter}`}
                         >
                             {item.name}
                         </li>
