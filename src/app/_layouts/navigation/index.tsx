@@ -6,8 +6,7 @@ import { RiGithubFill, RiMoonFill, RiYoutubeFill } from 'react-icons/ri';
 import { GoSearch } from 'react-icons/go';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import Link from 'next/link';
-import List from './list';
-import { usePathname } from 'next/navigation';
+import LeftSideBar from './leftsidebar';
 
 type NavProps = {
     children: ReactNode;
@@ -24,33 +23,6 @@ const Navigation: FC<NavProps> = ({ children }) => {
     const toggleSidebar = () => {
         setShowSidebar(!showSidebar);
     };
-
-    const currentPath = usePathname();
-
-    const highlighter = `rounded-md bg-blue-300 bg-opacity-30 ${darkMode ? 'text-blue-300' : 'text-blue-500'}`;
-
-    const componentList = List.map(component => (
-        <div key={component.category} className='mb-8'>
-            <div>
-                <p className={`uppercase px-2 mb-3 text-sm ${darkMode ? 'text-blue-300' : 'text-blue-500'} font-semibold`}>
-                    {component.category}
-                </p>
-            </div>
-            <ul>
-                {component.list.map((item, index) => (
-                    
-                    <Link key={index} href={item.link}>
-                        <li
-                            key={index}
-                            className={`my-2 px-2 py-1 text-sm font-medium ${currentPath == item.link ? highlighter : 'bg-transparent'}`}
-                        >
-                            {item.name}
-                        </li>
-                    </Link>
-                ))}
-            </ul>
-        </div>
-    ));
 
     return (
         <div className='flex flex-col h-screen'>
@@ -152,7 +124,7 @@ const Navigation: FC<NavProps> = ({ children }) => {
                             </div>
                         </div>
                         <div>
-                            {componentList}
+                            <LeftSideBar />
                         </div>
                     </div>
                 </div>
@@ -163,7 +135,7 @@ const Navigation: FC<NavProps> = ({ children }) => {
                 </div>
                 <div className='hidden md:inline w-[20%] overflow-y-auto px-2'>
                     <div className='p-3'>
-                        {componentList}
+                       <LeftSideBar />
                     </div>
                 </div>
             </div>
