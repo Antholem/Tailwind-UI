@@ -1,4 +1,4 @@
-const ComponentItems = [
+const ButtonItems = [
     {
         id: 'button_usage',
         sourceNo: 0,
@@ -25,4 +25,4 @@ const ComponentItems = [
     },
 ];
 
-export default ComponentItems
+export default ButtonItems

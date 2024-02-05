@@ -1,24 +1,23 @@
-"use client"
-import React, { useState } from 'react';
-import { Header, Body } from '@/app/_layouts';
-import { Clipboard } from '@/app/_components';
-import List from './list';
-import globalState from '@/app/state';
-import RightSideBar from '@/app/_layouts/navigation/rightsidebar';
+    "use client"
+    import React, { useState } from 'react';
+    import { Header, Body } from '@/app/_layouts';
+    import { Clipboard } from '@/app/_components';
+    import List from './list';
+    import globalState from '@/app/state';
+    import RightSideBar from '@/app/_layouts/navigation/rightsidebar';
 
-const Button = () => {
-    const [lastCopied, setLastCopied] = useState<number | null>(null);
-    const { darkMode } = globalState();
+    const Button = () => {
+        const [lastCopied, setLastCopied] = useState<number | null>(null);
+        const { darkMode } = globalState();
 
-    const handleCopy = (index: number) => {
-        setLastCopied(index);
-    };
+        const handleCopy = (index: number) => {
+            setLastCopied(index);
+        };
 
-    const title = 'Button';
-    const description = 'Button component is used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.';
+        const title = 'Button';
+        const description = 'Button component is used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.';
 
-    return (
-        <div className='flex flex-row space-x-5'>
+        return (
             <div className='flex flex-col space-y-10'>
                 <div>
                     <Header
@@ -29,6 +28,7 @@ const Button = () => {
                 <div>
                     {List.map((item) => (
                         <Body
+                            id={item.id}
                             key={item.id}
                             title={item.title}
                             description={item.description}
@@ -45,13 +45,7 @@ const Button = () => {
                     ))}
                 </div>
             </div>
-            <div className='hidden md:inline w-[20%] overflow-y-auto px-2'>
-                <div className='p-3'>
-                    <RightSideBar map={List} />
-                </div>
-            </div>
-        </div>
-    );
-}
+        );
+    }
 
-export default Button;
+    export default Button;
