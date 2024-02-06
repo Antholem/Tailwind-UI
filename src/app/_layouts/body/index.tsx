@@ -13,7 +13,7 @@ const Body: FC<BodyProps> = ({ id, title, description, component, clipboard }) =
     const { darkMode } = globalState();
 
     return (
-        <div id={id} className='flex flex-col space-y-6'>
+        <div id={id} className='flex flex-col space-y-4 py-6'>
             <div className='text-2xl font-medium'>
                 {title}
             </div>

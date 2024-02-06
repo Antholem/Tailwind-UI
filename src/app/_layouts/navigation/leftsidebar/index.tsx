@@ -14,7 +14,7 @@ const LeftSideBar = () => {
     return (
         <div>
             {Components.map((component) => (
-                <div key={component.category} className="mb-8">
+                <div key={component.category} className='mb-8'>
                     <div>
                         <p className={`uppercase px-2 mb-3 text-sm ${darkMode ? 'text-blue-300' : 'text-blue-500'} font-semibold`}>
                             {component.category}

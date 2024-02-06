@@ -137,17 +137,8 @@ const Navigation: FC<NavProps> = ({ children }) => {
                         </div>
                     </div>
                 </div>
-                <div className='flex-1 overflow-y-auto px-4 lg:px-10 py-8'>
-                    <div className='p-3'>
-                        {children}
-                    </div>
-                </div>
-                <div className='hidden md:inline w-[20%] overflow-y-auto px-2'>
-                    <div className='p-3'>
-                        <RightSideBar map={componentLists['/button']} />
-                        <a href="#button_sizes">Bottom</a>
-                        {/* <RightSideBar map={componentLists[currentRoute] || []} /> */}
-                    </div>
+                <div className='flex flex-1 flex-row overflow-y-auto'>
+                    {children}
                 </div>
             </div>
         </div>
