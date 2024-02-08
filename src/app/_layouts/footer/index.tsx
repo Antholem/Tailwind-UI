@@ -21,8 +21,8 @@ const Footer = () => {
                     </span>
                 </div>
                 <div className='flex flex-row space-x-6'>
-                    {socialIcons.map((icon) => (
-                        <div>
+                    {socialIcons.map((icon, index) => (
+                        <div key={index}>
                             <div className={`${darkMode ? 'text-gray-200' : 'text-gray-400'} cursor-pointer`}>
                                 {icon}
                             </div>
