@@ -4,6 +4,7 @@ import { FaTwitter, FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
     const { darkMode } = globalState();
+    const currentYear = new Date().getFullYear();
 
     return (
         <div className='py-2'>
@@ -14,7 +15,7 @@ const Footer = () => {
                 <div className='text-sm'>
                     Made by Sam Manalo
                     <span className={`${darkMode ? 'text-blue-200' : 'text-blue-900'}`}>
-                        {' '}@
+                        {' '}@{currentYear}
                     </span>
                 </div>
                 <div className='flex flex-row space-x-6'>
