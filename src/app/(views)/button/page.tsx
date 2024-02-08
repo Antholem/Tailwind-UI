@@ -49,45 +49,7 @@ const Button = () => {
 
     return (
         <Fragment>
-            <div className='flex flex-1 flex-col space-y-6 overflow-y-auto px-6 md:px-10 py-10' 
-            // ref={scrollRef}
-            >
-                <div>
-                    <Header
-                        title={ButtonList.ButtonHeader.title}
-                        description={ButtonList.ButtonHeader.description}
-                    />
-                </div>
-                <div>
-                    {/* {ButtonList.ButtonItems.map((item) => (
-                        <Body
-                            id={item.id}
-                            key={item.id}
-                            style='flex flex-col space-y-4 py-6'
-                            title={item.title}
-                            description={item.description}
-                            component={darkMode ? item.component.dark : item.component.light}
-                            clipboard={
-                                <Clipboard
-                                    sourceCode={item.source}
-                                    header={item.clipboard}
-                                    onCopy={() => handleCopy(item.sourceNo)}
-                                    isCheck={lastCopied === item.sourceNo}
-                                />
-                            }
-                        />
-                    ))} */}
-                </div>
-                <div>
-                    <Footer />
-                </div>
-            </div>
-            {/* <div className='overflow-y-auto hidden md:inline w-[20%]'>
-                <RightSideBar 
-                    map={ButtonList.ButtonItems}
-                    highlight={'scrollLocation'}
-                />
-            </div> */}
+           
         </Fragment>
     );
 }
