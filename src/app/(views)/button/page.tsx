@@ -59,7 +59,7 @@ const Button = () => {
                     />
                 </div>
                 <div>
-                    {ButtonList.ButtonItems.map((item) => (
+                    {/* {ButtonList.ButtonItems.map((item) => (
                         <Body
                             id={item.id}
                             key={item.id}
@@ -76,7 +76,7 @@ const Button = () => {
                                 />
                             }
                         />
-                    ))}
+                    ))} */}
                 </div>
                 <div>
                     <Footer />
