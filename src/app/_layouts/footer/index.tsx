@@ -10,7 +10,7 @@ const Footer = () => {
 
     return (
         <div className='py-2'>
-            <div className='mb-10'>
+            {/* <div className='mb-10'>
                 <hr className={`${darkMode ? 'border-gray-600' : 'border-gray-300'}`} />
             </div>
             <div className='flex flex-col space-y-6 justify-center items-center'>
@@ -29,7 +29,7 @@ const Footer = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };
