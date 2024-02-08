@@ -14,23 +14,15 @@ type RightSideBarProps = {
 const RightSideBar: React.FC<RightSideBarProps> = ({ map, highlight }) => {
     const { darkMode } = globalState();
 
-    const handleClick = (id: string) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
-
     return (
         <div className='px-2'>
             <ul>
                 {map.map((component) => (
                     <li
                         key={component.id}
-                        className={`my-2 px-2 py-1 text-sm ${component.id === highlight ? (darkMode ? 'text-blue-300 font-bold' : 'text-blue-500 font-bold') : 'text-inherit font-medium'}`}
-                        onClick={() => handleClick(component.id)}
+                        className={`my-2 px-2 py-1 text-sm ${component.id == highlight ? (darkMode ? 'text-blue-300 font-bold' : 'text-blue-500 font-bold') : 'text-inherit font-medium'}`}
                     >
-                        <a href={`#${component.id}`} onClick={(e) => e.preventDefault()}>
+                        <a href={`#${component.id}`}>
                             {component.title}
                         </a>
                     </li>
