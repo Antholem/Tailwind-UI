@@ -5,15 +5,16 @@ type BodyProps = {
     id: string;
     title: string;
     description: string;
+    style: string;
     component: JSX.Element;
     clipboard: JSX.Element;
 };
 
-const Body: FC<BodyProps> = ({ id, title, description, component, clipboard }) => {
+const Body: FC<BodyProps> = ({ id, title, description, component, clipboard, style }) => {
     const { darkMode } = globalState();
 
     return (
-        <div id={id} className='flex flex-col space-y-4 py-6'>
+        <div id={id} className={style}>
             <div className='text-2xl font-medium'>
                 {title}
             </div>
