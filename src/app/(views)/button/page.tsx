@@ -6,7 +6,6 @@ import List from './list';
 import globalState from '@/app/state';
 import RightSideBar from '@/app/_layouts/navigation/rightsidebar';
 import ButtonItems from './list';
-import Footer from '@/app/_layouts/footer';
 
 const Button = () => {
     const [lastCopied, setLastCopied] = useState<number | null>(null);
@@ -46,9 +45,6 @@ const Button = () => {
                             }
                         />
                     ))}
-                </div>
-                <div>
-                    <Footer />
                 </div>
             </div>
             <div className='overflow-y-auto hidden md:inline w-[20%]'>
