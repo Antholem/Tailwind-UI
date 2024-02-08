@@ -1,12 +1,12 @@
 import globalState from '@/app/state';
-import React from 'react'
-import { FaTwitter, FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
+import React from 'react';
+import { FaTwitter, FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {
     const { darkMode } = globalState();
     const currentYear = new Date().getFullYear();
 
-    const socialIcons = [<FaTwitter />, <FaGithub />, <FaLinkedin />, <FaYoutube />]
+    const socialIcons = [<FaTwitter />, <FaGithub />, <FaLinkedin />, <FaYoutube />];
 
     return (
         <div className='py-2'>
@@ -31,7 +31,7 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;
