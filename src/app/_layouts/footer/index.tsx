@@ -6,8 +6,6 @@ const Footer = () => {
     const { darkMode } = globalState();
     const currentYear = new Date().getFullYear();
 
-    const socialIcons = [<FaTwitter />, <FaGithub />, <FaLinkedin />, <FaYoutube />]
-
     return (
         <div className='py-2'>
             <div className='mb-10'>
@@ -21,13 +19,18 @@ const Footer = () => {
                     </span>
                 </div>
                 <div className='flex flex-row space-x-6'>
-                    {socialIcons.map((icon, index) => (
-                        <div key={index}>
-                            <div className={`${darkMode ? 'text-gray-200' : 'text-gray-400'} cursor-pointer`}>
-                                {icon}
-                            </div>
-                        </div>
-                    ))}
+                    <div className={`${darkMode ? 'text-gray-200' : 'text-gray-400'} cursor-pointer`}>
+                        <FaTwitter />
+                    </div>
+                    <div className={`${darkMode ? 'text-gray-200' : 'text-gray-400'} cursor-pointer`}>
+                        <FaGithub />
+                    </div>
+                    <div className={`${darkMode ? 'text-gray-200' : 'text-gray-400'} cursor-pointer`}>
+                        <FaLinkedin />
+                    </div>
+                    <div className={`${darkMode ? 'text-gray-200' : 'text-gray-400'} cursor-pointer`}>
+                        <FaYoutube />
+                    </div>
                 </div>
             </div>
         </div>

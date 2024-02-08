@@ -110,7 +110,28 @@ const Navigation: FC<NavProps> = ({ children }) => {
                     </div>
                 </div>
             </div>
-            
+            <div className='flex flex-1 overflow-y-auto'>
+                <div className={`overflow-y-auto md:w-1/5 px-4 py-2 absolute md:static shadow-lg bottom-0 top-0 left-0 right-20 ${darkMode ? 'bg-[#232c3b] md:bg-inherit' : 'bg-[#ffffff] md:bg-inherit'} transition-transform duration-300 ease-in-out transform ${showSidebar ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
+                    <div className='flex flex-col space-y-1'>
+                        <div className='flex md:hidden justify-end'>
+                            <div onClick={toggleSidebar} className='relative cursor-pointer'>
+                                <div className={`${darkMode ? 'text-gray-200' : 'text-gray-400'} cursor-pointer`}>
+                                    <div className='text-2xl'>
+                                        <MdOutlineClose />
+                                    </div>
+                                </div>
+                                <div className='absolute inset-0 rounded-lg bg-gray-400 opacity-0 hover:opacity-30 transition-opacity duration-300 active:bg-gray-500' />
+                            </div>
+                        </div>
+                        <div>
+                            <LeftSideBar />
+                        </div>
+                    </div>
+                </div>
+                <div className='flex flex-1 flex-row overflow-y-auto'>
+                    {children}
+                </div>
+            </div>
         </div>
     );
 };
