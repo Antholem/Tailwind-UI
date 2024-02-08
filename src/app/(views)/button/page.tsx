@@ -82,12 +82,12 @@ const Button = () => {
                     <Footer />
                 </div>
             </div>
-            <div className='overflow-y-auto hidden md:inline w-[20%]'>
+            {/* <div className='overflow-y-auto hidden md:inline w-[20%]'>
                 <RightSideBar 
                     map={ButtonList.ButtonItems}
                     highlight={'scrollLocation'}
                 />
-            </div>
+            </div> */}
         </Fragment>
     );
 }
