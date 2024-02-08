@@ -52,7 +52,7 @@ const Button = () => {
                 </div>
             </div>
             <div className='overflow-y-auto hidden md:inline w-[20%]'>
-                <RightSideBar map={ButtonItems} />
+                <RightSideBar map={ButtonItems} highlight='s' />
             </div>
         </Fragment>
     );
