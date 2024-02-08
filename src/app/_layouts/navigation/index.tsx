@@ -7,8 +7,6 @@ import { GoSearch } from 'react-icons/go';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import Link from 'next/link';
 import LeftSideBar from './leftsidebar';
-import { ButtonItems, CheckboxItems } from '@/app/(views)';
-import RightSideBar from './rightsidebar';
 
 type NavProps = {
     children: ReactNode;
@@ -25,13 +23,6 @@ const Navigation: FC<NavProps> = ({ children }) => {
     const toggleSidebar = () => {
         setShowSidebar(!showSidebar);
     };
-
-    const componentLists = {
-        '/checkbox': CheckboxItems,
-        '/button': ButtonItems,
-        // Add more routes and corresponding lists as needed
-    };
-
 
     return (
         <div className='flex flex-col h-screen'>
