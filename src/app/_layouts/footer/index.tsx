@@ -1,6 +1,6 @@
+import React from 'react';
+import { FaTwitter, FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import globalState from '@/app/state';
-import React from 'react'
-import { FaTwitter, FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
     const { darkMode } = globalState();
@@ -30,7 +30,7 @@ const Footer = () => {
             <div className='mb-10'>
                 <hr className={`${darkMode ? 'border-gray-600' : 'border-gray-300'}`} />
             </div>
-            <div className='flex flex-col space-y-6 justify-center items-center'>
+            <div className='flex flex-col justify-center items-center space-y-6'>
                 <div className='text-sm'>
                     Made by Sam Manalo
                     <span className={`${darkMode ? 'text-blue-200' : 'text-blue-900'}`}>
@@ -40,7 +40,7 @@ const Footer = () => {
                 <div className='flex flex-row space-x-6'>
                     {SocialIcons.map((item) => (
                         <div key={item.id}>
-                            <div id={item.id} className={`${darkMode ? 'text-gray-200' : 'text-gray-400'} cursor-pointer`}>
+                            <div id={item.id} className={`cursor-pointer ${darkMode ? 'text-gray-200' : 'text-gray-400'}`}>
                                 {item.icon}
                             </div>
                         </div>
@@ -48,7 +48,7 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;

@@ -1,14 +1,9 @@
-import Button from './button/page'
-import Checkbox from './checkbox/page'
-import Home from './home/page'
-
-import ButtonItems from './button/list'
-import CheckboxItems from './checkbox/list'
+import Button from '@/app/(views)/button/page';
+import ButtonItems from '@/app/(views)/button/list';
+import Home from '@/app/(views)/home/page';
 
 export {
     Button,
     ButtonItems,
-    Checkbox,
-    CheckboxItems,
     Home
-}
+};

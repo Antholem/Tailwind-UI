@@ -1,6 +1,6 @@
 import React from 'react';
-import globalState from '@/app/state';
 import Link from 'next/link';
+import globalState from '@/app/state';
 
 type ComponentItem = {
     id: string;

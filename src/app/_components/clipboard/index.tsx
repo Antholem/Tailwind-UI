@@ -16,13 +16,13 @@ const Clipboard: FC<ClipboardProps> = ({ sourceCode, header, onCopy, isCheck }) 
     const { darkMode } = globalState();
 
     return (
-        <div className={`bg-[${darkMode ? '#272f41' : '#f8f9fa'}] rounded-md overflow-hidden border ${darkMode ? 'border-gray-600' : 'border-gray-300'}`}>
-            <div className={`flex justify-between px-4 py-1 text-xs items-center ${darkMode ? 'bg-[#232b3b]' : 'bg-[#ebebeb]'}`}>
+        <div className={`overflow-hidden rounded-md border ${darkMode ? 'bg-[#272F41] border-gray-600' : 'bg-[#F8F9FA] border-gray-300'}`}>
+            <div className={`flex justify-between px-4 py-1 text-xs items-center ${darkMode ? 'bg-[#232B3B]' : 'bg-[#EBEBEB]'}`}>
                 <p className='text-xs'>
                     {header}
                 </p>
                 <CopyToClipboard text={sourceCode} onCopy={onCopy}>
-                    <button className='py-1 inline-flex items-center gap-1'>
+                    <button className='inline-flex items-center gap-1 py-1'>
                         {isCheck ? <HiOutlineCheck /> : <HiOutlineClipboard />}
                         <p className='text-xs'>
                             Copy Code
