@@ -1,3 +1,6 @@
+import Components from '@/app/(views)/(forms)/button/components';
+import Sources from '@/app/(views)/(forms)/button/sources';
+
 const ButtonHeader = {
     title: 'Button',
     describe: 'The button component serves as a catalyst for various actions or events, including but not limited to submitting forms, initiating dialogues, cancelling processes, or executing deletion tasks.',
@@ -10,13 +13,13 @@ const ButtonComponents = [
         title: 'Usage',
         description: 'For basic button, add background color, padding, and border radius only.',
         component: {
-            dark: <button className='bg-blue-300 text-black p-2 rounded-md'>Button</button>,
-            light: <button className='bg-blue-500 text-white p-2 rounded-md'>Button</button>
+            dark: Components.ButtonDark(),
+            light: Components.ButtonLight()
         },
         clipboard: 'Button',
         source: {
-            dark: `<div>\n\t<button className='bg-blue-300 p-2 rounded-md'>\n\t\tButton\n\t</button>\n</div>`,
-            light: `<div>\n\t<button className='bg-blue-500 p-2 rounded-md'>\n\t\tButton\n\t</button>\n</div>`
+            dark: Sources.ButtonSourceDark(),
+            light: Sources.ButtonSourceLight()
         },
     },
     {
@@ -25,13 +28,13 @@ const ButtonComponents = [
         title: 'Button Sizes',
         description: 'For basic button, add background color, padding, and border radius only.',
         component: {
-            dark: <button className='bg-blue-300 text-black p-2 rounded-md'>Button</button>,
-            light: <button className='bg-blue-500 text-white p-2 rounded-md'>Button</button>
+            dark: Components.ButtonDark(),
+            light: Components.ButtonLight()
         },
         clipboard: 'Button',
         source: {
-            dark: `<div>\n\t<button className='bg-blue-300 p-2 rounded-md'>\n\t\tButton\n\t</button>\n</div>`,
-            light: `<div>\n\t<button className='bg-blue-500 p-2 rounded-md'>\n\t\tButton\n\t</button>\n</div>`
+            dark: Sources.ButtonSourceDark(),
+            light: Sources.ButtonSourceLight()
         },
     },
 ];
