@@ -1,5 +1,5 @@
-import Button from '@/app/(views)/button/page';
-import ButtonList from '@/app/(views)/button/list';
+import Button from '@/app/(views)/(forms)/button/page';
+import ButtonList from '@/app/(views)/(forms)/button/list';
 import Home from '@/app/(views)/home/page';
 
 export {
