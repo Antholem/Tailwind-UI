@@ -16,7 +16,7 @@ const Clipboard: FC<ClipboardProps> = ({ sourceCode, header, onCopy, isCheck }) 
     const { darkMode } = globalState();
 
     return (
-        <div className={`bg-[${darkMode ? '#272f41' : '#f8f9fa'}] rounded-md overflow-hidden`}>
+        <div className={`bg-[${darkMode ? '#272f41' : '#f8f9fa'}] rounded-md overflow-hidden border ${darkMode ? 'border-gray-600' : 'border-gray-300'}`}>
             <div className={`flex justify-between px-4 py-1 text-xs items-center ${darkMode ? 'bg-[#232b3b]' : 'bg-[#ebebeb]'}`}>
                 <p className='text-xs'>
                     {header}
@@ -30,7 +30,7 @@ const Clipboard: FC<ClipboardProps> = ({ sourceCode, header, onCopy, isCheck }) 
                     </button>
                 </CopyToClipboard>
             </div>
-            <SyntaxHighlighter className='text-md p-8' language="javascript" style={darkMode ? dark : light} wrapLongLines={false}>
+            <SyntaxHighlighter className='text-md p-8' language='javascript' style={darkMode ? dark : light} wrapLongLines={false}>
                 {sourceCode}
             </SyntaxHighlighter>
         </div>
