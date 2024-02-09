@@ -1,7 +1,7 @@
 'use client';
 import React, { Fragment, useState } from 'react';
 import { Header, Body, Footer, RightSideBar } from '@/app/_layouts';
-import { ButtonItems } from '@/app/(views)';
+import { ButtonList as List } from '@/app/(views)/';
 import { Clipboard } from '@/app/_components';
 import globalState from '@/app/state';
 
@@ -13,20 +13,17 @@ const Button = () => {
         setLastCopied(index);
     };
 
-    const title = 'Button';
-    const description = 'Button component is used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.';
-
     return (
         <Fragment>
             <div className='px-6 md:px-10 py-10 flex flex-1 flex-col space-y-6 overflow-y-auto'>
                 <div>
                     <Header
-                        title={title}
-                        description={description}
+                        title={List.ButtonHeader.title}
+                        description={List.ButtonHeader.describe}
                     />
                 </div>
                 <div>
-                    {ButtonItems.map((item) => (
+                    {List.ButtonComponents.map((item) => (
                         <Body
                             id={item.id}
                             key={item.id}
@@ -49,7 +46,7 @@ const Button = () => {
                 </div>
             </div>
             <div className='overflow-y-auto hidden md:inline w-[20%]'>
-                <RightSideBar map={ButtonItems} />
+                <RightSideBar map={List.ButtonComponents} />
             </div>
         </Fragment>
     );

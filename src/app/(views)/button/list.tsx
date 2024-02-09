@@ -1,4 +1,9 @@
-const ButtonItems = [
+const ButtonHeader = {
+    title: 'Button',
+    describe: 'Button component is used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.',
+};
+
+const ButtonComponents = [
     {
         id: 'button_usage',
         sourceNo: 0,
@@ -25,4 +30,4 @@ const ButtonItems = [
     },
 ];
 
-export default ButtonItems
+export default { ButtonHeader, ButtonComponents }
