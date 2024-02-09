@@ -6,10 +6,8 @@ import { usePathname } from 'next/navigation';
 
 const LeftSideBar = () => {
     const { darkMode } = globalState();
-
     const currentPath = usePathname();
-
-    const highlighter = `rounded-md bg-blue-300 bg-opacity-30 ${darkMode ? 'text-blue-300' : 'text-blue-500'}`;
+    const highlighter = `bg-blue-300 bg-opacity-30 hover:bg-opacity-40 ${darkMode ? 'text-blue-300' : 'text-blue-500'}`;
 
     return (
         <div>
@@ -26,7 +24,7 @@ const LeftSideBar = () => {
                                 <li
                                     id={item.id}
                                     key={index}
-                                    className={`my-2 px-2 py-1 text-sm font-medium ${currentPath === item.link ? highlighter : 'bg-transparent'}`}
+                                    className={`my-2 px-2 py-1 text-sm font-medium rounded-md hover:bg-blue-300 hover:bg-opacity-30 transition duration-300 ease-in-out ${currentPath === item.link ? highlighter : 'bg-transparent'}`}
                                 >
                                     {item.name}
                                 </li>
