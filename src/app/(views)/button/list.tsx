@@ -1,6 +1,6 @@
 const ButtonHeader = {
     title: 'Button',
-    describe: 'Button component is used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.',
+    describe: 'The button component serves as a catalyst for various actions or events, including but not limited to submitting forms, initiating dialogues, cancelling processes, or executing deletion tasks.',
 };
 
 const ButtonComponents = [
