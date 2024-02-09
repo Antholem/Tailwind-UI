@@ -1,22 +1,24 @@
 import React, { FC } from 'react';
 import globalState from '@/app/state';
+import { ComponentLink } from '@/app/_components';
 
 type BodyProps = {
     id: string;
+    href: string;
     title: string;
     description: string;
     component: JSX.Element;
     clipboard: JSX.Element;
 };
 
-const Body: FC<BodyProps> = ({ id, title, description, component, clipboard }) => {
+const Body: FC<BodyProps> = ({ id, title, href, description, component, clipboard }) => {
     const { darkMode } = globalState();
 
     return (
         <div id={id} className='flex flex-col space-y-4 py-6'>
-            <div className='text-2xl font-medium'>
+            <ComponentLink href={href}>
                 {title}
-            </div>
+            </ComponentLink>
             <div>
                 {description}
             </div>
