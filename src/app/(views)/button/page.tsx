@@ -1,12 +1,9 @@
-"use client"
+'use client';
 import React, { Fragment, useState } from 'react';
-import { Header, Body } from '@/app/_layouts';
+import { Header, Body, Footer, RightSideBar } from '@/app/_layouts';
+import { ButtonItems } from '@/app/(views)';
 import { Clipboard } from '@/app/_components';
-import List from './list';
 import globalState from '@/app/state';
-import RightSideBar from '@/app/_layouts/navigation/rightsidebar';
-import ButtonItems from './list';
-import Footer from '@/app/_layouts/footer';
 
 const Button = () => {
     const [lastCopied, setLastCopied] = useState<number | null>(null);
@@ -21,7 +18,7 @@ const Button = () => {
 
     return (
         <Fragment>
-            <div className='flex flex-1 flex-col space-y-6 overflow-y-auto px-6 md:px-10 py-10'>
+            <div className='px-6 md:px-10 py-10 flex flex-1 flex-col space-y-6 overflow-y-auto'>
                 <div>
                     <Header
                         title={title}
@@ -29,7 +26,7 @@ const Button = () => {
                     />
                 </div>
                 <div>
-                    {List.map((item) => (
+                    {ButtonItems.map((item) => (
                         <Body
                             id={item.id}
                             key={item.id}
@@ -56,6 +53,6 @@ const Button = () => {
             </div>
         </Fragment>
     );
-}
+};
 
 export default Button;

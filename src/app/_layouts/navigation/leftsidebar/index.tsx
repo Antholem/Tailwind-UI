@@ -1,8 +1,8 @@
 import React from 'react';
-import Components from '../list';
-import globalState from '@/app/state';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Components } from '@/app/_layouts';
+import globalState from '@/app/state';
 
 const LeftSideBar = () => {
     const { darkMode } = globalState();
@@ -14,7 +14,7 @@ const LeftSideBar = () => {
             {Components.map((component) => (
                 <div key={component.category} className='mb-8'>
                     <div>
-                        <p className={`uppercase px-2 mb-3 text-sm ${darkMode ? 'text-blue-300' : 'text-blue-500'} font-semibold`}>
+                        <p className={`px-2 mb-3 text-sm uppercase font-semibold ${darkMode ? 'text-blue-300' : 'text-blue-500'}`}>
                             {component.category}
                         </p>
                     </div>

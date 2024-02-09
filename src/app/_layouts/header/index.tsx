@@ -15,7 +15,7 @@ const Header: FC<HeaderProps> = ({ title, description }) => {
                 {description}
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Header;

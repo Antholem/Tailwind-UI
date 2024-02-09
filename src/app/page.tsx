@@ -1,16 +1,16 @@
 'use client';
 import React from 'react';
 import globalState from '@/app/state';
-import { Home } from './(views)';
+import { Home } from '@/app/(views)';
 
 const Page = () => {
-  const { darkMode } = globalState();
+    const { darkMode } = globalState();
 
-  return (
-    <div className={` ${darkMode && 'dark-mode'}`}>
-      <Home />
-    </div>
-  );
+    return (
+        <div className={`${darkMode && 'dark-mode'}`}>
+            <Home />
+        </div>
+    );
 };
 
 export default Page;

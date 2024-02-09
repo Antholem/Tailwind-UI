@@ -8,8 +8,8 @@ type DarkModeStore = {
 const globalState = create<DarkModeStore>((set) => ({
     darkMode: true,
     setDarkMode: () => set((state) => ({
-        darkMode: !state.darkMode,
-    })),
+        darkMode: !state.darkMode
+    }))
 }));
 
 export default globalState;
