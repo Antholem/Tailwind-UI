@@ -14,7 +14,10 @@ const ButtonComponents = [
             light: <button className='bg-blue-500 text-white p-2 rounded-md'>Button</button>
         },
         clipboard: 'Button',
-        source: `<div>\n\t<button className='bg-blue-400 p-2 rounded-md'>\n\t\tButton\n\t</button>\n</div>`
+        source: {
+            dark: `<div>\n\t<button className='bg-blue-300 p-2 rounded-md'>\n\t\tButton\n\t</button>\n</div>`,
+            light: `<div>\n\t<button className='bg-blue-500 p-2 rounded-md'>\n\t\tButton\n\t</button>\n</div>`
+        },
     },
     {
         id: 'button_sizes',
@@ -26,7 +29,10 @@ const ButtonComponents = [
             light: <button className='bg-blue-500 text-white p-2 rounded-md'>Button</button>
         },
         clipboard: 'Button',
-        source: `<div>\n\t<button className='bg-blue-400 p-2 rounded-md'>\n\t\tButton\n\t</button>\n</div>`
+        source: {
+            dark: `<div>\n\t<button className='bg-blue-300 p-2 rounded-md'>\n\t\tButton\n\t</button>\n</div>`,
+            light: `<div>\n\t<button className='bg-blue-500 p-2 rounded-md'>\n\t\tButton\n\t</button>\n</div>`
+        },
     },
 ];
 
