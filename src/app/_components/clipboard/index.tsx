@@ -6,13 +6,14 @@ import { HiOutlineCheck, HiOutlineClipboard } from 'react-icons/hi';
 import globalState from '@/app/state';
 
 type ClipboardProps = {
+    language: string;
     sourceCode: string;
     header: string;
     onCopy: () => void;
     isCheck: boolean;
 };
 
-const Clipboard: FC<ClipboardProps> = ({ sourceCode, header, onCopy, isCheck }) => {
+const Clipboard: FC<ClipboardProps> = ({ language, sourceCode, header, onCopy, isCheck }) => {
     const { darkMode } = globalState();
 
     return (
@@ -30,7 +31,7 @@ const Clipboard: FC<ClipboardProps> = ({ sourceCode, header, onCopy, isCheck }) 
                     </button>
                 </CopyToClipboard>
             </div>
-            <SyntaxHighlighter className='text-md p-8' language='javascript' style={darkMode ? dark : light} wrapLongLines={false}>
+            <SyntaxHighlighter className='text-md p-8' language={language} style={darkMode ? dark : light} wrapLongLines={false}>
                 {sourceCode}
             </SyntaxHighlighter>
         </div>

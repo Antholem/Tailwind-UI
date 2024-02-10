@@ -33,6 +33,7 @@ const Button = () => {
                             component={darkMode ? item.component.dark : item.component.light}
                             clipboard={
                                 <Clipboard
+                                    language={item.language}
                                     sourceCode={darkMode ? item.source.dark : item.source.light}
                                     header={item.clipboard}
                                     onCopy={() => handleCopy(item.sourceNo)}
