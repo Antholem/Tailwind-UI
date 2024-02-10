@@ -6,6 +6,11 @@ const Components = [
                 id: 'home',
                 name: 'Home',
                 link: '/'
+            },
+            {
+                id: 'installation',
+                name: 'Installation',
+                link: '/installation'
             }
         ]
     },
