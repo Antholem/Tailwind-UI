@@ -1,3 +1,4 @@
+import Fragment from '@/app/_layouts/fragment';
 import Navigation from '@/app/_layouts/navigation';
 import RightSideBar from '@/app/_layouts/navigation/rightsidebar';
 import LeftSideBar from '@/app/_layouts/navigation/leftsidebar';
@@ -7,6 +8,7 @@ import Footer from '@/app/_layouts/footer';
 import Components from '@/app/_layouts/navigation/list';
 
 export {
+  Fragment,
   Navigation,
   Components,
   RightSideBar,

@@ -1,6 +1,6 @@
 'use client';
 import React, { Fragment, useState } from 'react';
-import { Header, Body, Footer, RightSideBar } from '@/app/_layouts';
+import { Header, Body, Footer, RightSideBar, Fragment as Wrap } from '@/app/_layouts';
 import { ButtonList as List } from '@/app/(views)/';
 import { Clipboard } from '@/app/_components';
 import globalState from '@/app/state';
@@ -15,7 +15,7 @@ const Button = () => {
 
     return (
         <Fragment>
-            <div className='px-6 md:px-10 py-10 flex flex-1 flex-col space-y-6 overflow-y-auto'>
+            <Wrap.Body>
                 <div>
                     <Header
                         title={List.ButtonHeader.title}
@@ -46,10 +46,10 @@ const Button = () => {
                 <div>
                     <Footer />
                 </div>
-            </div>
-            <div className='overflow-y-auto hidden md:inline w-[20%]'>
+            </Wrap.Body>
+            <Wrap.Sidebar>
                 <RightSideBar map={List.ButtonComponents} />
-            </div>
+            </Wrap.Sidebar>
         </Fragment>
     );
 };
