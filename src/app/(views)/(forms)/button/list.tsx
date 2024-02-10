@@ -12,6 +12,7 @@ const ButtonComponents = [
         sourceNo: 0,
         title: 'Usage',
         description: 'For basic button, add background color, padding, and border radius only.',
+        language: 'javascript',
         component: {
             dark: Components.ButtonDark(),
             light: Components.ButtonLight()
@@ -27,6 +28,7 @@ const ButtonComponents = [
         sourceNo: 1,
         title: 'Button Sizes',
         description: 'For basic button, add background color, padding, and border radius only.',
+        language: 'javascript',
         component: {
             dark: Components.ButtonDark(),
             light: Components.ButtonLight()
