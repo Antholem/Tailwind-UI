@@ -23,4 +23,4 @@ const ButtonSourceLight = () => {
 export default {
     ButtonSourceDark,
     ButtonSourceLight
-}
+};
