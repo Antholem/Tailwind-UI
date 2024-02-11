@@ -7,7 +7,7 @@ type BodyProps = {
     href: string;
     title: string;
     description: string;
-    component: JSX.Element;
+    component: JSX.Element | null;
     clipboard: JSX.Element;
 };
 
@@ -22,9 +22,11 @@ const Body: FC<BodyProps> = ({ id, title, href, description, component, clipboar
             <div>
                 {description}
             </div>
-            <div className={`border-solid border p-4 rounded-lg ${darkMode ? 'border-gray-600' : 'border-gray-300'}`}>
-                {component}
-            </div>
+            {component &&
+                <div className={`border-solid border p-4 rounded-lg ${darkMode ? 'border-gray-600' : 'border-gray-300'}`}>
+                    {component}
+                </div>
+            }
             <div>
                 {clipboard}
             </div>
