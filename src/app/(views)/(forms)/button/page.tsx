@@ -26,9 +26,11 @@ const Button = () => {
                     {List.ButtonComponents.map((item) => (
                         <Body
                             id={item.id}
+                            bulletNum={null}
                             href={item.id}
                             key={item.id}
                             title={item.title}
+                            subtitle={null}
                             description={item.description}
                             component={darkMode ? item.component.dark : item.component.light}
                             clipboard={
