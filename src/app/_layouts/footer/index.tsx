@@ -31,9 +31,9 @@ const Footer = () => {
                 <hr className={`${darkMode ? 'border-gray-600' : 'border-gray-300'}`} />
             </div>
             <div className='flex flex-col justify-center items-center space-y-6'>
-                <div className='text-sm'>
+                <div className={`text-sm ${darkMode ? 'text-gray-300' : 'text-gray-500'}`}>
                     Made by Sam Manalo
-                    <span className={`${darkMode ? 'text-blue-200' : 'text-blue-900'}`}>
+                    <span className={`${darkMode ? 'text-blue-200' : 'text-blue-400'}`}>
                         {' '}@{currentYear}
                     </span>
                 </div>

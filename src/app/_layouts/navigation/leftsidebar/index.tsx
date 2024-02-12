@@ -24,7 +24,7 @@ const LeftSideBar = () => {
                                 <li
                                     id={item.id}
                                     key={index}
-                                    className={`my-2 px-2 py-1 text-sm font-medium rounded-md hover:bg-blue-300 hover:bg-opacity-30 transition duration-300 ease-in-out ${currentPath === item.link ? highlighter : 'bg-transparent'}`}
+                                    className={`my-2 px-2 py-1 text-sm font-medium rounded-md hover:bg-blue-300 hover:bg-opacity-30 transition duration-300 ease-in-out ${currentPath === item.link ? highlighter : 'bg-transparent'} ${darkMode ? 'text-gray-200' : 'text-gray-700'}`}
                                 >
                                     {item.name}
                                 </li>

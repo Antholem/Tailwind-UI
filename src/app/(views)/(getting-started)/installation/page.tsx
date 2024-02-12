@@ -26,9 +26,11 @@ const Installation = () => {
           {List.InstallationComponents.map((item) => (
             <Body
               id={item.id}
+              bulletNum={item.bulletNum}
               href={item.id}
               key={item.id}
               title={item.title}
+              subtitle={item.subtitle}
               description={item.description}
               component={null}
               clipboard={
