@@ -1,17 +1,31 @@
 import React from 'react';
 
-const InstallationCliSourceDark = () => {
+const InstallationNextJs = () => {
     return (
-        `npm install -D tailwindcss
-npx tailwindcss init`
+        `npx create-next-app@latest my-project --typescript --eslint
+cd my-project`
     );
 };
 
-const InstallationPaths = () => {
+const InstallationNextJsTailwind = () => {
     return (
-        `/* @type {import('tailwindcss').Config} */
+        `npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p`
+    );
+};
+
+const InstallationNextJsPath = () => {
+    return (
+        `/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+ 
+    // Or if using 'src' directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {},
   },
@@ -20,7 +34,7 @@ module.exports = {
     );
 };
 
-const InstallationDirectives = () => {
+const InstallationNextJsCss = () => {
     return (
         `@tailwind base;
 @tailwind components;
@@ -28,34 +42,29 @@ const InstallationDirectives = () => {
     );
 };
 
-const InstallationBuildProcess = () => {
+const InstallationNextJsRun = () => {
     return (
-        `npx tailwindcss -i ./src/input.css -o ./src/output.css --watch`
+        `npm run dev`
     );
 };
 
-const InstallationHtml = () => {
+const InstallationNextJsStart = () => {
     return (
-        `<!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-</head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-</body>
-</html>`
+        `export default function Home() {
+  return (
+    <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+  )
+}`
     );
 };
 
 export default {
-    InstallationCliSourceDark,
-    InstallationPaths,
-    InstallationDirectives,
-    InstallationBuildProcess,
-    InstallationHtml
+    InstallationNextJs,
+    InstallationNextJsTailwind,
+    InstallationNextJsPath,
+    InstallationNextJsCss,
+    InstallationNextJsRun,
+    InstallationNextJsStart
 };
