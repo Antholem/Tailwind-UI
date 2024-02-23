@@ -32,45 +32,35 @@ const Components = [
                 name: 'Stack',
                 link: '/stack'
             },
+        ]
+    },
+    {
+        category: 'Data Display',
+        list: [
             {
-                id: 'home',
-                name: 'Stack',
-                link: '/stack'
+                id: 'badge',
+                name: 'Badge',
+                link: '/badge'
             },
             {
-                id: 'home',
-                name: 'Stack',
-                link: '/stack'
+                id: 'card',
+                name: 'Card',
+                link: '/card'
+            },
+        ]
+    },
+    {
+        category: 'Feedback',
+        list: [
+            {
+                id: 'alert',
+                name: 'Alert',
+                link: '/alert'
             },
             {
-                id: 'home',
-                name: 'Stack',
-                link: '/stack'
-            },
-            {
-                id: 'home',
-                name: 'Stack',
-                link: '/stack'
-            },
-            {
-                id: 'home',
-                name: 'Stack',
-                link: '/stack'
-            },
-            {
-                id: 'home',
-                name: 'Stack',
-                link: '/stack'
-            },
-            {
-                id: 'home',
-                name: 'Stack',
-                link: '/stack'
-            },
-            {
-                id: 'home',
-                name: 'Stack',
-                link: '/stack'
+                id: 'circular-progress',
+                name: 'Circular Progress',
+                link: '/circular-progress'
             },
         ]
     },
@@ -78,7 +68,7 @@ const Components = [
         category: 'Forms',
         list: [
             {
-                id: 'ibutton',
+                id: 'button',
                 name: 'Button',
                 link: '/button'
             },
