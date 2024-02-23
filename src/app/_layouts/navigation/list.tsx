@@ -88,9 +88,19 @@ const Components = [
                 link: '/checkbox'
             },
             {
-                id: 'slider',
-                name: 'Slider',
-                link: '/slider'
+                id: 'editable',
+                name: 'Editable',
+                link: '/editable'
+            },
+            {
+                id: 'form-control',
+                name: 'Form Control',
+                link: '/form-control'
+            },
+            {
+                id: 'icon-button',
+                name: 'Icon Button',
+                link: '/icon-button'
             }
         ]
     },
