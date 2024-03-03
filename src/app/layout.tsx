@@ -27,7 +27,7 @@ export default function RootLayout({ children }: {
                 </title>
             </head>
             <body className={`${inter.className} bg-white ${darkMode && 'dark-mode'}`}>
-                {getCurrentPath == '/' ? <Home /> : <Navigation>{children}</Navigation>}
+                <Navigation>{children}</Navigation>
             </body>
         </html>
     );
