@@ -3,11 +3,6 @@ const Components = [
         category: 'Getting Started',
         list: [
             {
-                id: 'home',
-                name: 'Home',
-                link: '/'
-            },
-            {
                 id: 'installation',
                 name: 'Installation',
                 link: '/installation'

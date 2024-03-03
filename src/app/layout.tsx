@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google';
 import { usePathname } from 'next/navigation';
 import { Navigation } from '@/app/_layouts';
 import globalState from '@/app/state';
+import { Home } from './(views)';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -26,9 +27,7 @@ export default function RootLayout({ children }: {
                 </title>
             </head>
             <body className={`${inter.className} bg-white ${darkMode && 'dark-mode'}`}>
-                <Navigation>
-                    {children}
-                </Navigation>
+                {getCurrentPath == '/' ? <Home /> : <Navigation>{children}</Navigation>}
             </body>
         </html>
     );
